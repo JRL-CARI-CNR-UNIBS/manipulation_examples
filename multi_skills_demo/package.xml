@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>outbound_place</name>
+  <name>multi_skills_demo</name>
   <version>0.0.0</version>
-  <description>The outbound_place package</description>
+  <description>The multi_skills package demonstration</description>
   <maintainer email="manuel.beschi@stiima.cnr.it">Manuel Beschi</maintainer>
   <license>BSD</license>
 

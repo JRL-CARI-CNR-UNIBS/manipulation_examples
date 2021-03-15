@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.0)
-project(go_to_location)
+project(go_to_location_demo)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
