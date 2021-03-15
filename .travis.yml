@@ -1,0 +1,44 @@
+# Travis Continuous Integration Configuration File For CNR ROS Manipulation Projects
+# Author: Enrico Villagrossi
+language: cpp
+services:
+  - docker
+
+notifications:
+  email:
+    recipients:
+      - enrico.villagrossi@stiima.cnr.it
+    on_success: change #[always|never|change] # default: change
+    on_failure: change #[always|never|change] # default: always
+env:
+  global:
+    - UPSTREAM_WORKSPACE='manipulation_test.rosinstall -XXX'
+    - ROS_PARALLEL_JOBS='-j4'
+  matrix:
+    - ROS_DISTRO=noetic ROS_REPO=ros
+    #- ROS_DISTRO=noetic ROS_REPO=ros-testing
+    #- ROS_DISTRO=noetic DOWNSTREAM_WORKSPACE='manipulation_test.rosinstall -XXX'
+install:
+  - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
+script:
+  - .industrial_ci/travis.sh
+
+
+
+#jobs:
+#  include:
+#    - name: ROS tests
+#      services:
+#        - docker
+#      env:
+#        - ROS_DISTRO="noetic"
+#        - ROSINSTALL_FILE=$CI_SOURCE_PATH/dependencies.rosinstall
+#        - ROS_PARALLEL_JOBS='-j4'
+#        - UPSTREAM_WORKSPACE=".upstream.repos"
+#        - ADDITIONAL_DEBS="curl"
+#        - CMAKE_ARGS="-DENABLE_COVERAGE_TESTING=ON -DCMAKE_BUILD_TYPE=Debug"
+#        - AFTER_SCRIPT="./.coverage.sh"
+#      install:
+#        - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
+#      script:
+#        - source ./.codecov.sh && .industrial_ci/travis.sh
