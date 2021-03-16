@@ -26,59 +26,47 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include <ros/ros.h>
-#include <geometry_msgs/PoseStamped.h>
-#include <eigen_conversions/eigen_msg.h>
-#include <actionlib/client/simple_action_client.h>
-#include <manipulation_msgs/PlaceObjectsAction.h>
-#include <manipulation_msgs/RemoveObjectFromSlot.h>
-#include <manipulation_utils/manipulation_load_params_utils.h>
 
+#include <manipulation_msgs/JobExecution.h>
+
+bool callback(manipulation_msgs::JobExecution::Request& request, 
+              manipulation_msgs::JobExecution::Response& response)
+{
+  ROS_INFO("Fake JobExecution callback received: skill name %s, tool_id %s, property_id %d",  request.skill_name.c_str(), 
+                                                                                              request.tool_id.c_str(),
+                                                                                              request.property_id);
+
+  response.results = manipulation_msgs::JobExecution::Response::Success;
+  return true;
+}
 
 int main(int argc, char **argv)
-{
-  std::string object_name;
+{ 
+  std::string service_name;
   if( argc >= 2 && argc <= 4) 
   {
-    object_name = argv[1];    
+    service_name = argv[1];    
   }
   else
   {
-    ROS_ERROR("Wrong number of input, the input needed are: object_name.");
+    ROS_ERROR("Wrong number of input, the input needed are: service_name.");
     return -1;
   }
-  
-  ros::init(argc, argv, "outbound_place_client");
+
+  ros::init(argc, argv,"manipualtion_fake_tool_server");
   ros::NodeHandle nh;
 
-  actionlib::SimpleActionClient<manipulation_msgs::PlaceObjectsAction> place_ac("/outbound_place_server/manipulator/place");
-  ROS_INFO("Waiting for place server");
-  place_ac.waitForServer();
-  ROS_INFO("Connection ok");
+  ros::AsyncSpinner spinner(4);
+  spinner.start();
 
-  manipulation_msgs::PlaceObjectsGoal place_goal;
-  place_goal.object_name = object_name;
-  //place_goal.slot_names.push_back("A1");
-  place_goal.slot_names.push_back("A3");
-  //place_goal.slot_names.push_back("B1");
+  ROS_INFO("Creating fake tool server...");
+  ros::ServiceServer fake_tool_srv = nh.advertiseService(service_name,callback);
 
-  place_goal.tool_id = "fake_gripper";
-  place_goal.property_id = 3;
-
-  place_ac.sendGoalAndWait(place_goal);
-
-
-  ros::ServiceClient remove_object_from_slot_clnt = nh.serviceClient<manipulation_msgs::RemoveObjectFromSlot>("/outbound_place_server/remove_obj_from_slot");
-
-  manipulation_msgs::RemoveObjectFromSlot remove_object_from_slot;
-  remove_object_from_slot.request.object_to_remove_name = object_name;
-  remove_object_from_slot.request.slot_name = "A3";
-
-  if (!remove_object_from_slot_clnt.call(remove_object_from_slot))
+  ros::Rate lp(0.1);
+  while (ros::ok())
   {
-    ROS_ERROR("Unaspected error calling %s service",remove_object_from_slot_clnt.getService().c_str());
-    return false;
+    lp.sleep();
   }
 
-  ROS_INFO("Place client stopped");
   return 0;
 }

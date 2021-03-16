@@ -47,6 +47,9 @@ int main(int argc, char **argv)
   pick_goal.object_types.push_back("squadra_piccola");
   //pick_goal.object_types.push_back("squadra_grande");
 
+  pick_goal.tool_id = "fake_gripper";
+  pick_goal.property_id = 2;
+
   pick_ac.sendGoalAndWait(pick_goal);
   //pick_ac.sendGoalAndWait(pick_goal);
 
