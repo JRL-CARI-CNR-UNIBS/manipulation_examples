@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>manipulation_cell_description</name>
+  <version>0.0.0</version>
+  <description>The manipulation_cell_description package</description>
+
+  <maintainer email="manuel.beschi@unibs.it">Manuel</maintainer>
+  <license>BSD</license>
+  <url type="website">https://www.stiima.cnr.it/en/</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>robotiq_2f_85_gripper_visualization</depend>
+  <depend>ur_description</depend>
+  <depend>realsense2_description</depend>
+  <export>
+  </export>
+</package>

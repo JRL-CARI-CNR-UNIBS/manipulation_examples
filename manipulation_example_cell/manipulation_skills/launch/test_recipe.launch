@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <rosparam command="load" file="$(find manipulation_skills)/config/recipe.yaml"/>
+  <node pkg="multi_skills_example" name="multi_skills" type="multi_skills_example" output="screen"/>
+
+</launch>
+
+

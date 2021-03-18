@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>manipulation_tests</name>
+  <version>0.0.0</version>
+  <description>manipulation_tests metapackage</description>
+
+  <maintainer email="manuel.beschi@unibs.it">manuel</maintainer>
+  <license>TODO</license>
+
+  <author email="manuel.beschi@unibs.it">Manuel Beschi</author>
+   
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <export>
+    <metapackage/>
+  </export>
+</package>
