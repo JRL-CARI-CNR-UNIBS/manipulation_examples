@@ -53,7 +53,7 @@ int main(int argc, char **argv)
     return -1;
   }
 
-  ros::init(argc, argv,"manipualtion_fake_tool_server");
+  ros::init(argc, argv,"manipulation_fake_tool_server");
   ros::NodeHandle nh;
 
   ros::AsyncSpinner spinner(4);

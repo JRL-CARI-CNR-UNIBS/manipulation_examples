@@ -41,7 +41,7 @@
 <arg name="headless_mode" default="false" doc="Automatically send URScript to robot to execute. On e-Series this does require the robot to be in 'remote-control' mode. With this, the URCap is not needed on the robot."/>
 
 <include file="$(find manipulation_cell_description)/launch/upload.launch"/>
-<include file="$(find manipulation_cell_moveit_config)/launch/real.launch">
+<include file="$(find manipulation_moveit_config)/launch/real.launch">
 <arg name="pipeline" default="$(arg pipeline)" />
 <arg name="debug" default="$(arg debug)" />
 </include>

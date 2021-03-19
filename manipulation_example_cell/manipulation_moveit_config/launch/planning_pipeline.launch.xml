@@ -5,6 +5,6 @@
 
   <arg name="pipeline" default="ompl" />
 
-  <include file="$(find manipualtion_moveit_config)/launch/$(arg pipeline)_planning_pipeline.launch.xml" />
+  <include file="$(find manipulation_moveit_config)/launch/$(arg pipeline)_planning_pipeline.launch.xml" />
 
 </launch>

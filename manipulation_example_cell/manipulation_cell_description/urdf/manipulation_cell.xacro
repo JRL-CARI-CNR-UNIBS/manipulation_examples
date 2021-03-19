@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro" name="sharework" >
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="manipulation_cell" >
 
 <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
 <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro" />
