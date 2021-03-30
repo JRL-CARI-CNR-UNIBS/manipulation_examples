@@ -10,16 +10,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(catkin REQUIRED COMPONENTS
-  moveit_planning_helper
-  manipulation_msgs
-  manipulation_utils
-  roscpp
-  rosdyn_core
-  std_srvs
-  rosparam_utilities
-  object_loader_msgs
-  tf_conversions
-  #eigen_conversions
+              moveit_planning_helper
+              manipulation_msgs
+              manipulation_utils
+              roscpp
+              rosdyn_core
+              std_srvs
+              rosparam_utilities
+              object_loader_msgs
+              tf_conversions
 )
 
 catkin_package(
@@ -34,7 +33,6 @@ catkin_package(
                   std_srvs 
                   object_loader_msgs 
                   tf_conversions 
-                  #eigen_conversions
   DEPENDS
 )
 
