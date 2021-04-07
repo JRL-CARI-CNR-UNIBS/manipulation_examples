@@ -155,6 +155,9 @@ int main(int argc, char **argv)
         return 0;
       }
 
+      place_goal.tool_id = std::get<2>(skill);
+      place_goal.property_id = std::get<3>(skill);
+
       place_ac.sendGoalAndWait(place_goal);
 
       if (place_ac.getResult()->result < 0)
