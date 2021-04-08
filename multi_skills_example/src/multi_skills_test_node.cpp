@@ -44,7 +44,7 @@ int main(int argc, char **argv)
   ros::ServiceClient remove_object_from_slot_clnt = nh.serviceClient<manipulation_msgs::RemoveObjectFromSlot>("/outbound_place_server/remove_obj_from_slot");
   remove_object_from_slot_clnt.waitForExistence();
 
-  std::vector<std::tuple<std::string, std::vector<std::string>, std::string, int>> recipe;
+  std::vector<std::tuple<std::string, std::vector<std::string>, std::string, std::string, std::string, std::string>> recipe;
   XmlRpc::XmlRpcValue param;
   if (!pnh.getParam("recipe",param))
   {
@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 
   for(size_t i=0; i<param.size(); i++)
   {
-    std::tuple<std::string, std::vector<std::string>, std::string, int> sigle_skill; 
+    std::tuple<std::string, std::vector<std::string>, std::string, std::string, std::string, std::string> sigle_skill; 
     XmlRpc::XmlRpcValue config = param[i];
     if( config.getType() != XmlRpc::XmlRpcValue::TypeStruct)
     {
@@ -96,14 +96,28 @@ int main(int argc, char **argv)
     }
     std::string tool_id = rosparam_utilities::toString(config["tool_id"]);  
 
-    if( !config.hasMember("property_id") )
+    if( !config.hasMember("property_pre_execution_id") )
     {
       ROS_WARN("The element #%zu has not the field 'property_id'", i);
       continue;
     }
-    int property_id = rosparam_utilities::toInt(config["property_id"]);  
+    std::string property_pre_execution_id = rosparam_utilities::toString(config["property_pre_execution_id"]);  
 
-    sigle_skill = make_tuple(action, description, tool_id, property_id);  
+    if( !config.hasMember("property_execution_id") )
+    {
+      ROS_WARN("The element #%zu has not the field 'property_execution_id'", i);
+      continue;
+    }
+    std::string property_execution_id = rosparam_utilities::toString(config["property_execution_id"]);  
+
+    if( !config.hasMember("property_post_execution_id") )
+    {
+      ROS_WARN("The element #%zu has not the field 'property_post_execution_id'", i);
+      continue;
+    }
+    std::string property_post_execution_id = rosparam_utilities::toString(config["property_post_execution_id"]);  
+
+    sigle_skill = make_tuple(action, description, tool_id, property_pre_execution_id, property_execution_id, property_post_execution_id);  
     recipe.push_back(sigle_skill);
   }
 
@@ -114,7 +128,7 @@ int main(int argc, char **argv)
 
   manipulation_msgs::RemoveObjectFromSlot remove_object_from_slot;
 
-  for (const std::tuple<std::string,std::vector<std::string>,std::string,int>& skill: recipe)
+  for (const std::tuple<std::string, std::vector<std::string>, std::string, std::string, std::string, std::string>& skill: recipe)
   {
     ROS_INFO("skill -> %s",std::get<0>(skill).c_str());
 
@@ -126,7 +140,9 @@ int main(int argc, char **argv)
         pick_goal.object_types.push_back(object_type);
       }
       pick_goal.tool_id = std::get<2>(skill);
-      pick_goal.property_id = std::get<3>(skill);
+      pick_goal.property_pre_execution_id = std::get<3>(skill);
+      pick_goal.property_execution_id = std::get<4>(skill);
+      pick_goal.property_post_execution_id = std::get<5>(skill);
 
       pick_ac.sendGoalAndWait(pick_goal);
 
@@ -156,7 +172,9 @@ int main(int argc, char **argv)
       }
 
       place_goal.tool_id = std::get<2>(skill);
-      place_goal.property_id = std::get<3>(skill);
+      place_goal.property_pre_execution_id = std::get<3>(skill);
+      place_goal.property_execution_id = std::get<4>(skill);
+      place_goal.property_post_execution_id = std::get<5>(skill);
 
       place_ac.sendGoalAndWait(place_goal);
 

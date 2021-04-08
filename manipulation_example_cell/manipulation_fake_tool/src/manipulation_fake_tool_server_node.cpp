@@ -32,9 +32,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 bool callback(manipulation_msgs::JobExecution::Request& request, 
               manipulation_msgs::JobExecution::Response& response)
 {
-  ROS_INFO("Fake JobExecution callback received: skill name %s, tool_id %s, property_id %d",  request.skill_name.c_str(), 
+  ROS_INFO("Fake JobExecution callback received: skill name %s, tool_id %s, property_id %s",  request.skill_name.c_str(), 
                                                                                               request.tool_id.c_str(),
-                                                                                              request.property_id);
+                                                                                              request.property_id.c_str());
 
   response.results = manipulation_msgs::JobExecution::Response::Success;
   return true;
