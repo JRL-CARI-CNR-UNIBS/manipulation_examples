@@ -198,11 +198,6 @@ int main(int argc, char **argv)
     recipe.push_back(sigle_skill);
   }
 
-
-  manipulation_msgs::PlaceObjectsGoal place_goal;
-  manipulation_msgs::PickObjectsGoal pick_goal;
-  manipulation_msgs::GoToGoal go_to_goal;
-
   manipulation_msgs::RemoveObjectFromSlot remove_object_from_slot;
 
   for (const std::tuple<std::string, 
@@ -219,6 +214,8 @@ int main(int argc, char **argv)
 
     if (std::get<0>(skill).compare("pick")==0)
     {
+      manipulation_msgs::PickObjectsGoal pick_goal;
+
       for (const std::string& object_type: std::get<1>(skill))
       {
         ROS_INFO("[Group %s] Goal: pick object %s",pnh.getNamespace().c_str(),object_type.c_str());
@@ -242,15 +239,15 @@ int main(int argc, char **argv)
         return 0;
       }
       ROS_INFO("[Group %s] well done! I picked it, name = %s",pnh.getNamespace().c_str(),pick_ac.getResult()->object_name.c_str());
-      place_goal.object_name = pick_ac.getResult()->object_name;
-
     }
     else if (std::get<0>(skill).compare("place")==0)
     {
+      manipulation_msgs::PlaceObjectsGoal place_goal;
+
       for (const std::string& slot: std::get<1>(skill))
       {
         ROS_INFO("[Group %s] Goal: place object %s in slot %s",pnh.getNamespace().c_str(),place_goal.object_name.c_str(), slot.c_str());
-        place_goal.slot_names.push_back(slot);  
+        place_goal.slots_group_names.push_back(slot);  
       }
 
       if (!pick_ac.getResult()->object_name.empty())
@@ -293,6 +290,8 @@ int main(int argc, char **argv)
     }
     else if (std::get<0>(skill).compare("goto")==0)
     {
+      manipulation_msgs::GoToGoal go_to_goal;
+
       if (std::get<1>(skill).size() > 0)
         ROS_INFO("[Group %s] Goal: Go to %s",pnh.getNamespace().c_str(),std::get<1>(skill).at(0).c_str());
       
@@ -307,7 +306,7 @@ int main(int argc, char **argv)
 
       if (go_to_ac.getResult()->result < 0)
       {
-        ROS_ERROR("[Group %s] unable to place -> location name = %s",pnh.getNamespace().c_str(), go_to_goal.location_name.c_str());
+        ROS_ERROR("[Group %s] unable to go to -> location name = %s",pnh.getNamespace().c_str(), go_to_goal.location_name.c_str());
         return 0;
       }
       ROS_INFO("[Group %s] well done! ",pnh.getNamespace().c_str());

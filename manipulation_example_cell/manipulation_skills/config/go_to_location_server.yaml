@@ -2,13 +2,14 @@ go_to_location:
   manipulator:
   - {name: "home",        frame: "table", position: [0.52946, 0.639, 0.534], quaternion: [0.764, -0.644, 0.029, -0.0031]} #only as example 
   - {name: "desk1",       frame: "table", position: [0.454, 0.705, 0.674], quaternion: [0.707, 0.707, -0.026, -0.029]} #to be updated 
-  - {name: "warehouse2",  frame: "table", position: [-0.239, 1.289, 0.674], quaternion: [0.108, 0.993, -0.039, -0.006]} #to be updated
+  - {name: "warehouse2",  frame: "table", position: [-0.021, 1.813, 0.535], quaternion: [0.993, -0.112, 0.007, -0.042]} #to be updated
 
 
 go_to_location_server:
 
   ik_sol_number: 16
-  max_stall_iter: 16 
+  max_stall_iter: 16
+  collision_detector: FCL
 
   groups:
     manipulator: open_tip

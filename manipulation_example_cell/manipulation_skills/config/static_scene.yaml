@@ -1,5 +1,5 @@
 scene_objects:
-- {type: "barra_testa", frame: "table", position: [0.80, 1.0, 0.9], quaternion: [0, 0, 0, 1]}
+#- {type: "barra_testa", frame: "table", position: [0.80, 1.0, 0.9], quaternion: [0, 0, 0, 1]}
 - {type: "box_grigio", frame: "table", position: [0.63, 0.956, 0.125], quaternion: [0, 0, 0, 1]}
 - {type: "box_grigio", frame: "table", position: [0.63, 0.400, 0.125], quaternion: [0, 0, 0, 1]}
 
