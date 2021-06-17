@@ -68,7 +68,7 @@ int main(int argc, char **argv)
     return -1;
   }
 
-  for(size_t i=0; i<param.size(); i++)
+  for(int i=0; i<param.size(); i++)
   {
     std::tuple< std::string, // action 
                 std::vector<std::string>, // description
@@ -282,7 +282,7 @@ int main(int argc, char **argv)
       if (!remove_object_from_slot_clnt.call(remove_object_from_slot))
       {
         ROS_ERROR("Unespected error calling %s service",remove_object_from_slot_clnt.getService().c_str());
-        return false;
+        return 0;
       }
 
       ROS_INFO("[Group %s] well done! ",pnh.getNamespace().c_str());
@@ -295,7 +295,7 @@ int main(int argc, char **argv)
       if (std::get<1>(skill).size() > 0)
         ROS_INFO("[Group %s] Goal: Go to %s",pnh.getNamespace().c_str(),std::get<1>(skill).at(0).c_str());
       
-      go_to_goal.location_name = std::get<1>(skill).at(0);
+      go_to_goal.location_names.push_back( std::get<1>(skill).at(0) );
 
       go_to_goal.to_loc_ctrl_id = std::get<3>(skill);
 
@@ -306,7 +306,7 @@ int main(int argc, char **argv)
 
       if (go_to_ac.getResult()->result < 0)
       {
-        ROS_ERROR("[Group %s] unable to go to -> location name = %s",pnh.getNamespace().c_str(), go_to_goal.location_name.c_str());
+        ROS_ERROR("[Group %s] unable to go to -> location name = %s",pnh.getNamespace().c_str(), go_to_goal.location_names.at(0).c_str());
         return 0;
       }
       ROS_INFO("[Group %s] well done! ",pnh.getNamespace().c_str());
