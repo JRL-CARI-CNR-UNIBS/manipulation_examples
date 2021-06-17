@@ -13,7 +13,7 @@
 <rosparam if="$(arg baseline)" command="load" file="$(find sharework_cembre_moveit_config)/config/dirrt_planning_base.yaml" ns="go_to_location_server"/>
 <rosparam unless="$(arg baseline)" command="load" file="$(find sharework_cembre_moveit_config)/config/dirrt_planning.yaml" ns="go_to_location_server"/>
 
-<rosparam command="load" file="$(find sharework_cembre_skills)/config/go_to_location_server.yaml"/>
+<rosparam command="load" file="$(find manipulation_skills)/config/go_to_location_server.yaml"/>
 
 <node pkg="go_to_location"  type="go_to_location_server" name="go_to_location_server" output="screen" launch-prefix="$(arg launch_prefix)" >
   <param if="$(eval pipeline == 'ompl')" name="manipulator/planning_plugin" value="ompl_interface/OMPLPlanner" />
