@@ -1,0 +1,73 @@
+<launch>
+  <arg name="sw1" default="1"/>
+  <arg name="sw2" default="1"/>
+  <arg name="sw3" default="1"/>
+  <arg name="sw4" default="0"/>
+  <arg name="sw5" default="1"/>
+  <arg name="centroid" default="1"/>
+  
+    <!--1 HWaddr 00:1C:8D:00:07:07   -->
+    <!--2 HWaddr 00:1C:8D:00:06:A0 -->
+    <!--3 HWaddr 00:1C:8D:00:07:08 -->
+    <!--4 HWaddr 00:1C:8D:00:07:12 -->
+    <!--5 HWaddr 00:1C:8D:00:07:0E -->
+
+
+  <include if="$(arg sw1)" file="$(find swissranger_camera)/launch/sr_eth.launch">
+    <arg name="device_ip" value="192.168.1.33" /> 
+    <arg name="camera_id" value="swiss_ranger_1" />
+    <arg name="modulation_freq" value="0" />
+  </include>
+  
+  <include if="$(arg sw2)" file="$(find swissranger_camera)/launch/sr_eth.launch">
+    <arg name="device_ip" value="192.168.1.34" /> 
+    <arg name="camera_id" value="swiss_ranger_2" />
+    <arg name="modulation_freq" value="6" />
+  </include>
+  
+  <include if="$(arg sw3)"  file="$(find swissranger_camera)/launch/sr_eth.launch">
+    <arg name="device_ip" value="192.168.1.35" /> 
+    <arg name="camera_id" value="swiss_ranger_3" />
+    <arg name="modulation_freq" value="8" />
+  </include>
+  
+    
+  <include if="$(arg sw4)" file="$(find swissranger_camera)/launch/sr_eth.launch">
+    <arg name="device_ip" value="192.168.1.36" /> 
+    <arg name="camera_id" value="swiss_ranger_4" />
+    <arg name="modulation_freq" value="0" />
+  </include>
+  
+  <include if="$(arg sw5)" file="$(find swissranger_camera)/launch/sr_eth.launch">
+    <arg name="device_ip" value="192.168.1.37" /> 
+    <arg name="camera_id" value="swiss_ranger_5" />
+    <arg name="modulation_freq" value="11" />
+  </include>
+  
+  
+  <group if="$(arg centroid)">
+
+  <rosparam command="load" file="$(find cella1sensors)/config/centroid.yaml" />
+
+  <node pkg="centroid_detection" type="centroid_detection_node" name="centroid_detection_sw1" output="log" respawn="false">
+    <remap from="input" to="/swiss_ranger_1/pointcloud2_raw"/>
+  </node>
+
+  <node pkg="centroid_detection" type="centroid_detection_node" name="centroid_detection_sw2" output="log" respawn="false">
+    <remap from="input" to="/swiss_ranger_2/pointcloud2_raw"/>
+  </node>
+
+  <node pkg="centroid_detection" type="centroid_detection_node" name="centroid_detection_sw3" output="log" respawn="false">
+    <remap from="input" to="/swiss_ranger_3/pointcloud2_raw"/>
+  </node>
+
+  <node pkg="centroid_detection" type="centroid_detection_node" name="centroid_detection_sw5" output="log" respawn="false">
+    <remap from="input" to="/swiss_ranger_5/pointcloud2_raw"/>
+  </node>
+
+
+  <node pkg="centroid_detection" type="centroids_merge" name="centroids_merge" output="log" />
+
+
+  </group>
+</launch>

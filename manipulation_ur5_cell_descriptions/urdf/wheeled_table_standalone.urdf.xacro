@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="conveyor_system_stand_alone" >
+  
+  <xacro:include filename="$(find wheeled_table_description)/urdf/wheeled_table.urdf.xacro" />
+  <xacro:wheeled_table/>
+  
+  <link name="world" />
+  
+  <joint name="wheeled_table_joint" type="fixed">
+    <parent link="world" />
+    <child link = "tabletop" />
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+  </joint>
+  
+</robot>

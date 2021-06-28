@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+ 
+  <xacro:macro name="swisscameras">
+  
+    <link name="sr_frame"/>
+
+    <link name="swiss_ranger_1"/>
+  <link name="swiss_ranger_2"/>
+  <link name="swiss_ranger_3"/>
+  <link name="swiss_ranger_4"/>
+  <link name="swiss_ranger_5"/>
+
+  <joint name="swisscamera1" type="fixed">
+    <parent link = "sr_frame" />
+    <child  link = "swiss_ranger_1" />
+    <origin xyz  = "-1.7 -.1 0" rpy="0 0.0 ${0.5*pi} " />
+  </joint>
+
+
+  <joint name="swisscamera2" type="fixed">
+    <parent link = "sr_frame" />
+    <child  link = "swiss_ranger_2" />
+    <origin xyz  = "0 3.2 0" rpy="${pi} ${pi} ${pi} " />
+  </joint>
+  
+<joint name="swisscamera3" type="fixed">
+  <parent link = "sr_frame" />
+  <child  link = "swiss_ranger_3" />
+  <origin xyz  = "-1.7 2.52 0" rpy="0 0.0 ${0.5*pi} " />
+</joint>
+
+  <joint name="swisscamera4" type="fixed">
+    <parent link = "sr_frame" />
+    <child  link = "swiss_ranger_4" />
+    <origin xyz  = "1.6 2.57 0" rpy="0 0.0 ${-0.5*pi} " />
+  </joint>
+
+  
+
+
+
+  <link name="swiss_ranger_5_not_cal"/>
+  <joint name="swisscamera5_not_cal" type="fixed">
+    <parent link = "sr_frame" />
+    <child  link = "swiss_ranger_5_not_cal" />
+    <origin xyz  = "0 1.23 0" rpy="0 0.0 ${pi} " />
+  </joint>
+  <joint name="swisscamera5" type="fixed">
+    <parent link = "swiss_ranger_5_not_cal" />
+    <child  link = "swiss_ranger_5" />
+    <origin xyz  = "0.11 -0.5 0" rpy="0 -0.06 0 " />
+  </joint>
+
+
+
+
+  </xacro:macro>
+</robot>

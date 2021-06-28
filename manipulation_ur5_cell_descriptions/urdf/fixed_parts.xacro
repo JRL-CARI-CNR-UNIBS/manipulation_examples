@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="static_cell" >
+
+<xacro:macro name="static_cell">
+<xacro:include filename="$(find cella1_descriptions)/urdf/conveyor_system.urdf.xacro" />
+<xacro:conveyor_system/>
+<xacro:include filename="$(find cella1_descriptions)/urdf/shopdesk_dim.urdf.xacro" />
+<xacro:shopdesk/>
+<xacro:include filename="$(find cella1_descriptions)/urdf/swiss_cameras.urdf.xacro" />
+<xacro:swisscameras/>
+<xacro:include filename="$(find cella1_descriptions)/urdf/wheeled_table_dim.urdf.xacro" />
+<xacro:wheeled_table_dim/>
+
+<link name="world" />
+
+<!--<link name="rs1_depth_optical_frame" />
+<joint name="rs1_depth_optical_frame_fixed" type="fixed">
+  <parent link = "ur10_base_link" />
+  <child  link = "rs1_depth_optical_frame" />
+<origin xyz="-2.814 -0.264 0.528" rpy="-1.686 0.043 -1.279" />
+</joint>
+
+<link name="rs2_depth_optical_frame" />
+<joint name="rs2_depth_optical_frame_fixed" type="fixed">
+  <parent link = "ur10_base_link" />
+  <child  link = "rs2_depth_optical_frame" />
+<origin xyz="-2.908  1.279  0.489" rpy="-1.556 0.002 -1.876" />
+</joint>-->
+
+<link name="logi_c270_cella1_notcal" />
+<joint name="logi_c270_cella1_notcal_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "logi_c270_cella1_notcal" />
+<origin xyz="1.5 1.5 3.074" rpy="3.074 -0.116 1.368" />
+</joint>
+
+<link name="logi_c270_cella1" />
+
+<joint name="logi_c270_cella1_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "logi_c270_cella1" />
+  <origin xyz="-1.04 0.36 -0.42" rpy="0 0 -0.22" />
+</joint>
+
+<joint name="conveyor_system_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "conveyor_system" />
+<origin xyz="-0.92 -0.05 0.99" rpy="0.0 0.0 0.02" />
+</joint>
+
+
+<joint name="shopdesk_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "shopdesk" />
+<origin xyz="-0.62 1.55 0.94" rpy="0.0 0.0 ${-0.5*pi}" />
+</joint>
+
+<joint name="sr_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "sr_frame" />
+<origin xyz="3.3 0.8 ${3.068}" rpy="${pi} 0.0 ${-0.5*pi} " />
+</joint>
+
+
+
+
+<joint name="tabletop_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "tabletop" />
+  <origin xyz="1.73 1.72 1.04" rpy="0 0 ${-0.5*pi}" />
+</joint>
+
+<link name="floor">
+  <collision>
+    <origin  xyz="0.0 0.0 -0.5" rpy="0 0 0" />
+    <geometry>
+      <box size="8 8 1.0"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="floor_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "floor" />
+<origin xyz="2 2 1.0" rpy="0 0 0.0" />
+</joint>
+
+
+<link name="wall1">
+  <collision>
+    <origin  xyz="0.0 0.5 1.5" rpy="0 0 0" />
+    <geometry>
+      <box size="8 1 1.5"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="wall1_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "wall1" />
+<origin xyz="2 3.5 0" rpy="0 0 0.0" />
+</joint>
+
+
+<link name="wall2">
+  <collision>
+    <origin  xyz="0.0 -0.5 1.5" rpy="0 0 0" />
+    <geometry>
+      <box size="8 1 1.5"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="wall2_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "wall2" />
+<origin xyz="2 -1 0" rpy="0 0 0.0" />
+</joint>
+
+
+<link name="wall3">
+  <collision>
+    <origin  xyz="-0.5 0.0  1.5" rpy="0 0 0" />
+    <geometry>
+      <box size="1 8  1.5"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="wall3_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "wall3" />
+<origin xyz="-0.3 2 0" rpy="0 0 0.0" />
+</joint>
+
+<gazebo reference="world">
+    <static>true</static>
+</gazebo>
+<gazebo reference="shopdesk">
+    <static>true</static>
+</gazebo>
+<gazebo reference="conveyor_system">
+    <static>true</static>
+</gazebo>
+<gazebo reference="tabletop">
+    <static>true</static>
+</gazebo>
+<gazebo reference="table">
+    <static>true</static>
+</gazebo>
+
+</xacro:macro>
+</robot>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ur10dimo" >
+<xacro:macro name="ur10dimo">
+
+<xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+<xacro:arg name="kinematics_config_ur10" default="$(find cella1_descriptions)/config/ur10_calib.yaml"/>
+
+<xacro:include filename="$(find ur_description)/urdf/inc/ur10_macro.xacro"/>
+<xacro:ur10_robot prefix="ur10_"
+   transmission_hw_interface="$(arg transmission_hw_interface)"
+/>
+
+
+
+<joint name="tabletop_joint" type="fixed">
+  <parent link="tabletop" />
+  <child  link = "ur10_base_link" />
+  <origin xyz="0.7130    0.3170   -0.054" rpy="0 0 ${0.5*pi}" />
+</joint>
+
+<gazebo reference="ur10_tool0">>
+ <provideFeedback>true</provideFeedback>
+</gazebo>
+
+<gazebo>
+  <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+      <updateRate>100.0</updateRate>
+      <topicName>ur10_wrench</topicName>
+      <jointName>ur10_tool0</jointName>
+  </plugin>
+</gazebo>
+
+</xacro:macro>
+</robot>

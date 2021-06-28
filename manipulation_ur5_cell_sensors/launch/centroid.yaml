@@ -1,0 +1,91 @@
+reference_frame: "world"
+
+centroid_detection_sw1:
+  camera_frame: "swiss_ranger_1"
+  self_see_links:
+  - name: "shopdesk"
+  - name: "conveyor_system"
+  - name: "floor"
+  - name: "wall1"
+  - name: "wall2"
+  - name: "wall3"
+
+  min_sensor_dist: .2
+  self_see_default_padding: .15
+  self_see_default_scale: 1.0
+
+centroid_detection_sw2:
+  camera_frame: "swiss_ranger_2"
+  self_see_links:
+  - name: "shopdesk"
+  - name: "conveyor_system"
+  - name: "floor"
+  - name: "wall1"
+  - name: "wall2"
+  - name: "wall3"
+  - name: "ur5_base_link"
+  - name: "ur5_shoulder_link"
+  - name: "ur5_forearm_link"
+  - name: "ur5_wrist_1_link"
+  - name: "ur5_wrist_2_link"
+  - name: "ur5_wrist_3_link"
+  - name: "punta"
+  - name: "elmo_linear_guide_border"
+  - name: "elmo_linear_guide_stator"
+  - name: "elmo_linear_guide_cursor"
+
+  min_sensor_dist: .2
+  self_see_default_padding: .15
+  self_see_default_scale: 1.0
+
+centroid_detection_sw3:
+  camera_frame: "swiss_ranger_3"
+  self_see_links:
+  - name: "shopdesk"
+  - name: "conveyor_system"
+  - name: "floor"
+  - name: "wall1"
+  - name: "wall2"
+  - name: "wall3"
+  min_sensor_dist: .2
+  self_see_default_padding: .15
+  self_see_default_scale: 1.0
+
+
+centroid_detection_sw5:
+  camera_frame: "swiss_ranger_5"
+  self_see_links:
+  - name: "shopdesk"
+  - name: "conveyor_system"
+  - name: "floor"
+  - name: "wall1"
+  - name: "wall2"
+  - name: "wall3"
+  - name: "ur10_base_link"
+  - name: "ur10_shoulder_link"
+  - name: "ur10_forearm_link"
+  - name: "ur10_wrist_1_link"
+  - name: "ur10_wrist_2_link"
+  - name: "ur10_wrist_3_link"
+  - name: "ur5_base_link"
+  - name: "ur5_shoulder_link"
+  - name: "ur5_forearm_link"
+  - name: "ur5_wrist_1_link"
+  - name: "ur5_wrist_2_link"
+  - name: "ur5_wrist_3_link"
+  - name: "punta"
+  - name: "elmo_linear_guide_border"
+  - name: "elmo_linear_guide_stator"
+  - name: "elmo_linear_guide_cursor"
+  min_sensor_dist: .2
+  self_see_default_padding: .15
+  self_see_default_scale: 1.0
+
+link_frames:
+- "ur10_tool0"
+
+tof_cameras:
+- centroid_detection_sw1
+- centroid_detection_sw2
+- centroid_detection_sw3
+- centroid_detection_sw5

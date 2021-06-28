@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="static_cell" >
+
+<xacro:include filename="$(find cella1_descriptions)/urdf/fixed_parts.xacro" />
+<xacro:static_cell/>
+
+<xacro:include filename="$(find cella1_descriptions)/urdf/ur5.xacro" />
+<xacro:ur5dimo/>
+
+
+<gazebo>
+  <plugin name="ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/gazebo</robotNamespace>
+    <controlPeriod>0.001</controlPeriod>
+  </plugin>
+</gazebo>
+
+</robot>
+

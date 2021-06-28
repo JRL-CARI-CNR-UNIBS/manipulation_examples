@@ -1,0 +1,16 @@
+<launch>
+  <!-- (start your robot's MoveIt! stack, e.g. include its moveit_planning_execution.launch) -->
+  <!-- (start your tracking system's ROS driver) -->
+
+  <include file="$(find easy_handeye)/launch/publish.launch">
+    <arg name="eye_on_hand" value="false"/>
+<!--    <arg name="namespace_prefix" value="my_eob_calib"/>-->
+
+    <!-- fill in the following parameters according to your robot's published tf frames -->
+    <arg name="robot_base_frame" value="/ur10_base_link"/>
+    <arg name="inverse" value="true"/>
+    
+    <!-- fill in the following parameters according to your tracking system's published tf frames -->
+    <arg name="tracking_base_frame" value="/rs2_depth_optical_frame"/> 
+  </include>
+</launch>
