@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
-    package: cella1_descriptions
-    relative_path: urdf/cella_ur5.xacro
+    package: manipulation_ur5_cell_descriptions
+    relative_path: urdf/cell_ur5.xacro
     xacro_args: ""
   SRDF:
     relative_path: config/static_cell.srdf
   CONFIG:
-    author_name: Manuel Beschi
-    author_email: manuel.beschi@unibs.it
+    author_name: Enrico Villagrossi
+    author_email: enrico.villagrossi@stiima.cnr.it
     generated_timestamp: 1619189246

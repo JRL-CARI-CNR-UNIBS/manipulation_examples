@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <launch>
   <!-- By default we do not overwrite the URDF. Change the following to true to change the default behavior -->
   <arg name="load_robot_description" default="false"/>
@@ -6,19 +7,19 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find cella1_descriptions)/urdf/cella_ur5.xacro'"/>
+  <param if="$(arg load_robot_description)" name="$(arg robot_description)" command="xacro  '$(find manipulation_ur5_cell_descriptions)/urdf/cell_ur5.xacro'"/>
 
   <!-- The semantic description that corresponds to the URDF -->
-  <param name="$(arg robot_description)_semantic" textfile="$(find cella1_ur5_moveit_config)/config/static_cell.srdf" />
+  <param name="$(arg robot_description)_semantic" textfile="$(find manipulation_cell_ur5_moveit_config)/config/static_cell.srdf" />
 
   <!-- Load updated joint limits (override information from URDF) -->
   <group ns="$(arg robot_description)_planning">
-    <rosparam command="load" file="$(find cella1_ur5_moveit_config)/config/joint_limits.yaml"/>
+    <rosparam command="load" file="$(find manipulation_cell_ur5_moveit_config)/config/joint_limits.yaml"/>
   </group>
 
   <!-- Load default settings for kinematics; these settings are overridden by settings in a node's namespace -->
   <group ns="$(arg robot_description)_kinematics">
-    <rosparam command="load" file="$(find cella1_ur5_moveit_config)/config/kinematics.yaml"/>
+    <rosparam command="load" file="$(find manipulation_cell_ur5_moveit_config)/config/kinematics.yaml"/>
 
   </group>
 

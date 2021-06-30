@@ -17,15 +17,13 @@
 <rosparam command="load" file="$(find manipulation_ur5_cell_configurations)/config/controllers_dispatches.yaml" />
 
 <!--Load robot hardware-->
-<rosparam command="load" file="$(find cella1_configurations)/config/planner_hw.yaml" />
+<rosparam command="load" file="$(find manipulation_ur5_cell_configurations)/config/planner_hw.yaml" />
 <rosparam unless="$(arg fake)" command="load" file="$(find manipulation_ur5_cell_configurations)/config/ur5_hw.yaml" />
-<rosparam unless="$(arg fake)" command="load" file="$(find manipulation_ur5_cell_configurations)/config/elmo_hw.yaml" />
 <rosparam     if="$(arg fake)" command="load" file="$(find manipulation_ur5_cell_configurations)/config/fake_ur5_hw.yaml" />
-<rosparam     if="$(arg fake)" command="load" file="$(find manipulation_ur5_cell_configurations)/config/fake_elmo_hw.yaml" />
+
 <!--Load controllers-->
 <rosparam command="load" file="$(find manipulation_ur5_cell_configurations)/config/planner_controllers.yaml" />
 <rosparam command="load" file="$(find manipulation_ur5_cell_configurations)/config/ur5_controllers.yaml" />
-<rosparam command="load" file="$(find manipulation_ur5_cell_configurations)/config/elmo_controllers.yaml" />
 
 
 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
@@ -68,7 +66,7 @@
   <arg name="pipeline" value="$(arg pipeline)"/>
 </include>
 
-<include file="$(find cella1_ur5_moveit_config)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+<include file="$(find manipulation_cell_ur5_moveit_config)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
   <arg name="rviz_config" value="$(find manipulation_cell_ur5_moveit_config)/launch/moveit.rviz"/>
   <arg name="debug" value="$(arg debug)"/>
 </include>

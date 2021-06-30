@@ -23,7 +23,7 @@
           rpy="1.5707963267949 0 0" />
         <geometry>
           <mesh
-            filename="package://cella1_descriptions/meshes/conveyor_system.dae" />
+            filename="package://manipulation_ur5_cell_descriptions/meshes/conveyor_system.dae" />
         </geometry>
         <material
           name="">

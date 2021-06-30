@@ -1,29 +1,18 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="ur5dimo" >
+
 <xacro:macro name="ur5dimo">
 
-<xacro:include filename="$(find cella1_descriptions)/urdf/palmo.urdf.xacro" />
-<xacro:palmo/>
-<xacro:include filename="$(find cella1_descriptions)/urdf/elmo_linear_guide.urdf.xacro" />
-<xacro:elmo_linear_guide/>
-
 <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
-<xacro:arg name="kinematics_config_ur5" default="$(find cella1_descriptions)/config/ur5_calib.yaml"/>
+<xacro:arg name="kinematics_config_ur5" default="$(find manipulation_ur5_cell_descriptions)/config/ur5_calib.yaml"/>
 <xacro:include filename="$(find robotiq_ft_sensor)/urdf/robotiq_ft300.urdf.xacro" />
 <xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro" />
 
-<joint name="elmo_linear_guide_fixed" type="fixed">
-  <parent link = "world" />
-  <child  link = "elmo_linear_guide_stator" />
-  <origin xyz="0.090 -0.32 0.95" rpy="0 0 0.005" />
-</joint>
-
 <joint name="ur5_joint" type="fixed">
-  <parent link="elmo_linear_guide_cursor" />
+  <parent link="shopdesk" />
   <child  link = "ur5_base_link" />
-  <origin xyz="0.02    0.02   0" rpy="0 0 ${0*pi-0.2}" />
+  <origin xyz="0.7    -0.2   0.0" rpy="0 0 ${0*pi-0.2}" />
 </joint>
-
 
 
 <xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro"/>
@@ -35,14 +24,8 @@
   <origin xyz="0 0 0" rpy="0 0 0"/>
 </xacro:robotiq_ft300>
 
-<joint name="palmo_joint" type="fixed">
-  <parent link="ft300_sensor" />
-  <child  link = "palmo" />
-  <origin xyz="0.0    0.0   0" rpy="0 ${pi} 0" />
-</joint>
-
 <joint name="robotiq_joint" type="fixed">
-<parent link="palmo" />
+<parent link="ur5_tool0" />
 <child link = "robotiq_arg2f_base_link" />
 <origin xyz="0.0 0.0 0.0" rpy="0 0 ${0.0*pi}" />
 </joint>
@@ -52,7 +35,7 @@
 <link name="tip" />
 
 <joint name="tip_joint" type="fixed">
-  <parent link="palmo" />
+  <parent link="ur5_tool0" />
   <child  link = "tip" />
   <origin xyz="0 0 0.2078" rpy="0 0 0" />
 </joint>
@@ -70,4 +53,5 @@
 </gazebo>
 
 </xacro:macro>
+
 </robot>

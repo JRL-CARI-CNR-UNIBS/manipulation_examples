@@ -3,8 +3,6 @@
  
   <xacro:macro name="shopdesk">
 
-
-  
   <link name="shopdesk">
     <visual>
       <origin xyz="0 0 -0.5" rpy="0 0 0" />

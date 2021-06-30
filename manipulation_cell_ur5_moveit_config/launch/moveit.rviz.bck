@@ -6,9 +6,17 @@ Panels:
       Expanded:
         - /MotionPlanning1
         - /MotionPlanning1/Scene Robot1
-        - /MotionPlanning1/Scene Robot1/Links1
+        - /MotionPlanning1/Planning Request1
+        - /Speed override1
+        - /PoseArray1
+        - /Marker1
+        - /Marker2
+        - /place01
+        - /place11
+        - /place21
+        - /place31
       Splitter Ratio: 0.7425600290298462
-    Tree Height: 365
+    Tree Height: 182
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -342,7 +350,7 @@ Visualization Manager:
       Scene Robot:
         Attached Body Color: 150; 50; 150
         Links:
-          All Links Enabled: false
+          All Links Enabled: true
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
@@ -356,12 +364,12 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           elmo_linear_guide_stator:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           floor:
             Alpha: 1
             Show Axes: false
@@ -414,7 +422,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           right_inner_finger:
             Alpha: 1
             Show Axes: false
@@ -551,22 +559,22 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           wall2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           wall3:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           wall_conveyeor:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           world:
             Alpha: 1
             Show Axes: false
@@ -602,6 +610,22 @@ Visualization Manager:
       update interval: 0.03999999910593033
       width: 128
     - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+      Name: HumanModel
+      Robot Description: human_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
       Arrow Length: 0.10000000149011612
       Axes Length: 0.15000000596046448
       Axes Radius: 0.05000000074505806
@@ -618,6 +642,130 @@ Visualization Manager:
       Topic: /poses
       Unreliable: false
       Value: false
+    - Class: rviz/Marker
+      Enabled: false
+      Marker Topic: /goal_cost_function/avoidance_points
+      Name: Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: false
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /marker_visualization_topic
+      Name: Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: pick0
+      Queue Size: 4
+      Topic: /target0
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 25; 255; 240
+      radius: 0.10000000149011612
+      target name: pick 1
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: pick1
+      Queue Size: 4
+      Topic: /target1
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 25; 255; 240
+      radius: 0.10000000149011612
+      target name: pick 2
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: pick2
+      Queue Size: 4
+      Topic: /target2
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 25; 255; 240
+      radius: 0.10000000149011612
+      target name: pick 3
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: pick3
+      Queue Size: 4
+      Topic: /target3
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 25; 255; 240
+      radius: 0.10000000149011612
+      target name: pick 4
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: pick4
+      Queue Size: 4
+      Topic: /target4
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 25; 255; 240
+      radius: 0.10000000149011612
+      target name: pick 4
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: place0
+      Queue Size: 4
+      Topic: /place0
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 237; 212; 0
+      radius: 0.10000000149011612
+      target name: pick 4
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: place1
+      Queue Size: 4
+      Topic: /place1
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 237; 212; 0
+      radius: 0.10000000149011612
+      target name: pick 4
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: place2
+      Queue Size: 4
+      Topic: /place2
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 237; 212; 0
+      radius: 0.10000000149011612
+      target name: pick 4
+      type: Decoreted Circle
+    - Class: jsk_rviz_plugin/TargetVisualizer
+      Enabled: true
+      Name: place3
+      Queue Size: 4
+      Topic: /place3
+      Unreliable: false
+      Value: true
+      alpha: 0.800000011920929
+      color: 237; 212; 0
+      radius: 0.10000000149011612
+      target name: pick 4
+      type: Decoreted Circle
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -634,7 +782,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 6.328240871429443
+      Distance: 4.504316806793213
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -650,16 +798,16 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.24479630589485168
+      Pitch: 0.7747962474822998
       Target Frame: world
-      Yaw: 3.867281198501587
+      Yaw: 4.187282085418701
     Saved: ~
 Window Geometry:
   ConfigurationManager:
     collapsed: false
   Displays:
     collapsed: false
-  Height: 1016
+  Height: 1017
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -668,11 +816,11 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000200000000000002a20000039efc0200000007fb000000100044006900730070006c006100790073010000003d000001fe000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc000002410000019a0000019a0100001cfa000000000100000002fb000000180052006f0062006f0074007300540065006c0065006f00700100000000ffffffff0000009300fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001f300ffffff00000001000001120000039efc0200000001fb000000280043006f006e00660069006700750072006100740069006f006e004d0061006e0061006700650072010000003d0000039e0000016b00ffffff000003780000039e00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000200000000000002a2000003a3fc0200000007fb000000100044006900730070006c006100790073010000003b00000145000000c700fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc0000018600000258000002580100001afa000000000100000002fb000000180052006f0062006f0074007300540065006c0065006f00700100000000ffffffff0000024300fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001ca00ffffff0000000100000112000003a3fc0200000001fb000000280043006f006e00660069006700750072006100740069006f006e004d0061006e0061006700650072010000003b000003a30000017600ffffff000003c0000003a300000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RobotsTeleop:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1848
-  X: 72
-  Y: 27
+  Width: 1920
+  X: 8
+  Y: 31
