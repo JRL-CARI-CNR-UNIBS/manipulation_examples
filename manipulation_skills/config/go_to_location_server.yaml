@@ -1,23 +1,19 @@
 go_to_location:
-  manipulator:
-  - {name: "home",        frame: "table", position: [0.52946, 0.639, 0.534], quaternion: [0.764, -0.644, 0.029, -0.0031]} #only as example 
-  - {name: "desk1",       frame: "table", position: [0.454, 0.705, 0.674], quaternion: [0.707, 0.707, -0.026, -0.029]} #to be updated 
-  - {name: "warehouse2",  frame: "table", position: [-0.021, 1.813, 0.535], quaternion: [0.993, -0.112, 0.007, -0.042]} #to be updated
-
-
+  - {name: "home", frame: "shopdesk", position: [0.690, 0.299, 0.224], quaternion: [0.995, -0.100, -0.000, 0.000]}  
+  
 go_to_location_server:
 
-  ik_sol_number: 16
-  max_stall_iter: 1600
+  ik_sol_number: 512
+  max_stall_iter: 16
   collision_detector: FCL
+  planning_time: 5
+  move_group_names: [ur5]
 
   groups:
-    manipulator: open_tip
+    ur5: tip
      
-  manipulator:
+  ur5:
     preferred_configuration: [1.248980837684973, -1.2228279109171156, 1.9792593061627755, -2.2428737618677026, 1.553286774142281, 3.2935401617108626]
-    #preferred_configuration: [1.4762239456176758, -1.7016049824156703, 1.7525199095355433, -0.6964729589274903, 1.4800915718078613, -2.1354430357562464]
-
     preferred_configuration_weight: [0, 1, 1, 1, 1, 1]
     max_ik_goal_number: 512
     use_single_goal: false

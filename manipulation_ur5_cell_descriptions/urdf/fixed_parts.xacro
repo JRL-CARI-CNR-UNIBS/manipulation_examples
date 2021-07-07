@@ -26,7 +26,7 @@
 
 <link name="floor">
   <collision>
-    <origin  xyz="0.0 0.0 -0.5" rpy="0 0 0" />
+    <origin  xyz="0.0 0.0 -1.0" rpy="0 0 0" />
     <geometry>
       <box size="8 8 1.0"/>
     </geometry>
@@ -49,9 +49,7 @@
 <gazebo reference="conveyor_system">
     <static>true</static>
 </gazebo>
-<gazebo reference="table">
-    <static>true</static>
-</gazebo>
+
 
 </xacro:macro>
 </robot>

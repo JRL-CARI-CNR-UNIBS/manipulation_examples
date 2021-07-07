@@ -1,14 +1,13 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 84
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
         - /MotionPlanning1/Scene Robot1
-        - /MotionPlanning1/Scene Robot1/Links1
       Splitter Ratio: 0.7425600290298462
-    Tree Height: 365
+    Tree Height: 438
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -65,9 +64,9 @@ Visualization Manager:
           Y: 0
           Z: 0
         Size:
-          X: 2
-          Y: 2
-          Z: 2
+          X: 5
+          Y: 5
+          Z: 5
       Name: MotionPlanning
       Planned Path:
         Color Enabled: false
@@ -79,16 +78,6 @@ Visualization Manager:
           Expand Tree: false
           Link Tree Style: Links in Alphabetic Order
           conveyor_system:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          elmo_linear_guide_cursor:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          elmo_linear_guide_stator:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -133,19 +122,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          logi_c270_cella1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          logi_c270_cella1_notcal:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          palmo:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           right_inner_finger:
             Alpha: 1
             Show Axes: false
@@ -181,44 +157,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           shopdesk:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          sr_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_4:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_5:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_5_not_cal:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          table:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          tabletop:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -274,21 +212,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           ur5_wrist_3_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wall1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wall2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          wall3:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -342,7 +265,7 @@ Visualization Manager:
       Scene Robot:
         Attached Body Color: 150; 50; 150
         Links:
-          All Links Enabled: false
+          All Links Enabled: true
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
@@ -352,16 +275,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          elmo_linear_guide_cursor:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: false
-          elmo_linear_guide_stator:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: false
           floor:
             Alpha: 1
             Show Axes: false
@@ -402,19 +315,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          logi_c270_cella1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          logi_c270_cella1_notcal:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          palmo:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: false
           right_inner_finger:
             Alpha: 1
             Show Axes: false
@@ -450,44 +350,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
           shopdesk:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          sr_frame:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_4:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_5:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          swiss_ranger_5_not_cal:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          table:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          tabletop:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -547,26 +409,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          wall1:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: false
-          wall2:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: false
-          wall3:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: false
           wall_conveyeor:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: false
+            Value: true
           world:
             Alpha: 1
             Show Axes: false
@@ -634,7 +481,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 6.328240871429443
+      Distance: 5.143280982971191
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -642,17 +489,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 1.0094795227050781
-        Y: -0.35618144273757935
-        Z: -4.91737750962784e-07
+        X: -1.8012168407440186
+        Y: -0.8387196063995361
+        Z: -1.6838306464705965e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.24479630589485168
+      Pitch: 0.1647963672876358
       Target Frame: world
-      Yaw: 3.867281198501587
+      Yaw: 0.9772800207138062
     Saved: ~
 Window Geometry:
   ConfigurationManager:
@@ -668,7 +515,7 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000200000000000002a20000039efc0200000007fb000000100044006900730070006c006100790073010000003d000001fe000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc000002410000019a0000019a0100001cfa000000000100000002fb000000180052006f0062006f0074007300540065006c0065006f00700100000000ffffffff0000009300fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001f300ffffff00000001000001120000039efc0200000001fb000000280043006f006e00660069006700750072006100740069006f006e004d0061006e0061006700650072010000003d0000039e0000016b00ffffff000003780000039e00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000200000000000002a20000039efc0200000007fb000000100044006900730070006c006100790073010000003d000001f3000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc00000236000001a50000019a0100001cfa000000000100000002fb000000180052006f0062006f0074007300540065006c0065006f00700100000000ffffffff0000009300fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001f300ffffff00000001000001120000039efc0200000001fb000000280043006f006e00660069006700750072006100740069006f006e004d0061006e0061006700650072010000003d0000039e0000016b00ffffff000003780000039e00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RobotsTeleop:
     collapsed: false
   Views:

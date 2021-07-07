@@ -8,7 +8,6 @@ planner_hw:
   resources: [ joint_resource ]
   joint_resource:
     joint_names:
-    #- linear_motor_cursor_joint
     - ur5_shoulder_pan_joint
     - ur5_shoulder_lift_joint
     - ur5_elbow_joint
@@ -16,7 +15,6 @@ planner_hw:
     - ur5_wrist_2_joint
     - ur5_wrist_3_joint
     subscribed_topics :
-    #- /elmo/joint_states
     - /ur5/joint_states
     - /ur5/joint_states
     - /ur5/joint_states

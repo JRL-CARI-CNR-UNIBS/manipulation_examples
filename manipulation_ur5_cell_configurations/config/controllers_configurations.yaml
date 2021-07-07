@@ -3,14 +3,20 @@ control_configurations:
   components:
   - {hardware_interface: "ur5_hw", controller: "js_pub", description: ""}
   - {hardware_interface: "planner_hw", controller: "js_pub", description: ""}
+
+
 - name: "ctrl"
   depends: ["watch"]
   components:
   - {hardware_interface: "ur5_hw", controller: "ctrl1", description: ""}
+
+
 - name: "trajectory_tracking"
   depends: ["ctrl"]
   components:
   - {hardware_interface: "planner_hw", controller: "microinterpolator", description: ""}
+
+
 - name: "joint_jog"
   depends: ["ctrl"]
   components:

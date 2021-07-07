@@ -3,7 +3,7 @@
 <arg name="fake" default="true"/>
 <arg name="use_rviz" default="true" />
 <arg name="debug" default="false" />
-<arg name="pipeline" default="ompl" />
+<arg name="pipeline" default="dirrt" />
 
 
 <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -71,5 +71,6 @@
   <arg name="debug" value="$(arg debug)"/>
 </include>
 
+<node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
 
 </launch>

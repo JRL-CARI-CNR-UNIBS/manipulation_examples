@@ -20,7 +20,7 @@ int main(int argc, char **argv)
   ros::AsyncSpinner spinner(4);
   spinner.start();
 
-  std::string group_name = "manipulator";
+  std::string group_name = "ur5";
   if (!pnh.getParam("group_name",group_name))
   {
     ROS_ERROR("Node %s has not a parameter named group_name",pnh.getNamespace().c_str());
