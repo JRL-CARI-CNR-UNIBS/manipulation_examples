@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/michele/manipulation_ws/src/manipulation_examples/manipulation_example_cell/manipulation_fake_tool/devel/setup.sh
