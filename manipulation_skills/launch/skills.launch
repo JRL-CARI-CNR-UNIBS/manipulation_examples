@@ -19,6 +19,13 @@
 
 <include file="$(find manipulation_skills)/launch/scene_spawner.launch"/>
 
+<include file="$(find manipulation_skills)/launch/goto.launch">
+<arg name="debug" value="$(arg debug)"/>
+<arg name="load_param" value="$(arg load_param)"/>
+<arg name="pipeline" value="$(arg pipeline)"/>
+<arg name="baseline" value="$(arg baseline)"/>
+</include>
+
 <include file="$(find manipulation_skills)/launch/pick.launch">
 <arg name="debug" value="$(arg debug)"/>
 <arg name="load_param" value="$(arg load_param)"/>
@@ -26,16 +33,7 @@
 <arg name="baseline" value="$(arg baseline)"/>
 </include>
 
-
 <include file="$(find manipulation_skills)/launch/place.launch">
-<arg name="debug" value="$(arg debug)"/>
-<arg name="load_param" value="$(arg load_param)"/>
-<arg name="pipeline" value="$(arg pipeline)"/>
-<arg name="baseline" value="$(arg baseline)"/>
-</include>
-
-
-<include file="$(find manipulation_skills)/launch/goto.launch">
 <arg name="debug" value="$(arg debug)"/>
 <arg name="load_param" value="$(arg load_param)"/>
 <arg name="pipeline" value="$(arg pipeline)"/>

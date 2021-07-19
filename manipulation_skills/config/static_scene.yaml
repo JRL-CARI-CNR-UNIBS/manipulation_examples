@@ -1,10 +1,10 @@
 scene_objects:
-- {type: "box_grigio", frame: "conveyor_system", position: [0.5, 0.25, 0.0], quaternion: [0, 0, 0, 1]}
-- {type: "box_grigio", frame: "conveyor_system", position: [0.5, 0.25, 0.0], quaternion: [0, 0, 0, 1]}
+- {type: "box_grigio", frame: "conveyor_system", position: [0.4, 0.25, 0.1], quaternion: [0, 0, 0, 1]}
+- {type: "box_grigio", frame: "conveyor_system", position: [0.7, 0.25, 0.1], quaternion: [0, 0, 0, 1]}
 
 box_grigio:
   color: [0.2,0.2,0.2, 1.]
-  box:  [0.19,0.30,0.12]
+  box:  [0.20,0.30,0.05]
   offset_quaternion: [ 0, 0, 0, 1 ]
   offset: [0, 0, -0.06]
 

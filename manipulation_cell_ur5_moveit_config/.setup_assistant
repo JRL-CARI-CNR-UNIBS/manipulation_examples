@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: Enrico Villagrossi
     author_email: enrico.villagrossi@stiima.cnr.it
-    generated_timestamp: 1625666942
+    generated_timestamp: 1626089462

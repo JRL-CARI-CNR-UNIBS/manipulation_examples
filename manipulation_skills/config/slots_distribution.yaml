@@ -1,8 +1,14 @@
 outbound: 
   slots:
-  - {name: "A1", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.5, 0.25, 0.05], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "A2", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.5, 0.25, 0.05], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "A3", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.5, 0.25, 0.25], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "B1", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.5, 0.25, 0.25], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "B2", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.5, 0.25, 0.25], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "B3", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.5, 0.25, 0.25], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  - {name: "A1", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [0.7071068, -0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
+  - {name: "A2", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  - {name: "A3", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [0.7071068,  0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
+  - {name: "B1", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  - {name: "B2", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [0.7071068, -0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
+  - {name: "B3", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [0.7071068,  0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
+  #- {name: "A1", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  #- {name: "A2", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  #- {name: "A3", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  #- {name: "B1", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  #- {name: "B2", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  #- {name: "B3", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}

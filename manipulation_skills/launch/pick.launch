@@ -2,7 +2,6 @@
 
 <launch>
 <arg name="pipeline" default="dirrt" />
-<arg name="collision_detection" default="gpuvoxel" />
 <arg name="load_param" default="load" />
 <arg name="debug" default="false" />
   <arg name="baseline" default="false"/>

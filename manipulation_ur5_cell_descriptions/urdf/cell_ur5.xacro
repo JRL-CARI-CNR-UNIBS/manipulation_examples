@@ -5,7 +5,7 @@
 <xacro:static_cell/>
 
 <xacro:include filename="$(find manipulation_ur5_cell_descriptions)/urdf/ur5.xacro" />
-<xacro:ur5dimo/>
+<!--xacro:ur5dimo/-->
 
 
 <gazebo>
