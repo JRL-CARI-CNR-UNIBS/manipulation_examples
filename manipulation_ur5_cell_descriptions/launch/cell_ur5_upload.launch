@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find manipulation_ur5_cell_descriptions)/urdf/cell_ur5.xacro'" />
+</launch>

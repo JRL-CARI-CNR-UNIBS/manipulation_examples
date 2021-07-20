@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>manipulation_ur5_cell_configurations</name>
+  <version>0.0.0</version>
+  <description>The manipulation_ur5_cell_configurations package</description>
+
+  <maintainer email="enrico.villagrossi@stiima.cnr.it">Enrico Villagrossi</maintainer>
+
+
+  <license>BSD</license>
+
+
+ 
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>ur5_cell_descriptions</depend>
+
+
+  <export>
+  </export>
+</package>

@@ -1,0 +1,34 @@
+planner_hw:
+  type           : "cnr/control/TopicsRobotHW"
+  appenders      : [file, screen]
+  levels         : [trace, debug]
+  pattern_layout : "[%5p][%d{HH:mm:ss,SSS}][%50M:%04L][%24c] %m%n"
+  file_name      : "planner_hw"
+
+  resources: [ joint_resource ]
+  joint_resource:
+    joint_names:
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+    subscribed_topics :
+    - /ur5/joint_states
+    - /ur5/joint_states
+    - /ur5/joint_states
+    - /ur5/joint_states
+    - /ur5/joint_states
+    - /ur5/joint_states
+    published_topics :
+    - /ur5/joint_target
+
+  sampling_period: 0.008
+  diagnostic_period: 0.1
+  feedback_joint_state_timeout: 20
+  maximum_missing_cycles: 1000
+  base_link: world
+  tool_link: ur5_tool0
+  robot_description_param: /robot_description
+  robot_description_planning_param: /robot_description_planning

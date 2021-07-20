@@ -17,28 +17,8 @@ env:
   matrix:
     - ROS_DISTRO=noetic ROS_REPO=ros
     - ROS_DISTRO=noetic ROS_REPO=ros-testing
-    - ROS_DISTRO=noetic DOWNSTREAM_WORKSPACE='manipulation_test.rosinstall -inbound_pick_test -outbound_place_test -go_to_location_test'
+    - ROS_DISTRO=noetic DOWNSTREAM_WORKSPACE='manipulation_examples.rosinstall -inbound_pick_test -outbound_place_test -go_to_location_test'
 install:
   - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
 script:
   - .industrial_ci/travis.sh
-
-
-
-#jobs:
-#  include:
-#    - name: ROS tests
-#      services:
-#        - docker
-#      env:
-#        - ROS_DISTRO="noetic"
-#        - ROSINSTALL_FILE=$CI_SOURCE_PATH/dependencies.rosinstall
-#        - ROS_PARALLEL_JOBS='-j4'
-#        - UPSTREAM_WORKSPACE=".upstream.repos"
-#        - ADDITIONAL_DEBS="curl"
-#        - CMAKE_ARGS="-DENABLE_COVERAGE_TESTING=ON -DCMAKE_BUILD_TYPE=Debug"
-#        - AFTER_SCRIPT="./.coverage.sh"
-#      install:
-#        - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
-#      script:
-#        - source ./.codecov.sh && .industrial_ci/travis.sh

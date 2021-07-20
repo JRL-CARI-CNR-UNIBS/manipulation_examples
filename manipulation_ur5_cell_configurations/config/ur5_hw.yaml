@@ -1,0 +1,14 @@
+ur5_hw:
+  type: "itia/control/UrDriverHwIfaceNodelet"
+  joint_names:
+  - u5_shoulder_pan_joint
+  - u5_shoulder_lift_joint
+  - u5_elbow_joint
+  - u5_wrist_1_joint
+  - u5_wrist_2_joint
+  - u5_wrist_3_joint
+
+  sampling_period: 0.008
+  diagnostic_period: 0.1
+  max_tracking_error: 0.02
+

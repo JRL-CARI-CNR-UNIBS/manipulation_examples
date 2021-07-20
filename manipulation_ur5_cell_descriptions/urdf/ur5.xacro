@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ur5dimo" >
+
+<!--xacro:macro name="ur5dimo"-->
+
+<xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+<xacro:arg name="kinematics_config_ur5" default="$(find manipulation_ur5_cell_descriptions)/config/ur5_calib.yaml"/>
+<xacro:arg name="joint_limits_config_ur5" default="$(find manipulation_ur5_cell_descriptions)/config/joint_limits.yaml"/>
+
+<xacro:include filename="$(find robotiq_ft_sensor)/urdf/robotiq_ft300.urdf.xacro" />
+<xacro:include filename="$(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model_macro.xacro" />
+
+<!-- arm parameters -->
+<xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro"/>
+<xacro:ur5_robot prefix="ur5_"
+  transmission_hw_interface="(arg transmission_hw_interface)"
+  kinematics_parameters_file="$(arg kinematics_config_ur5)"
+  joint_limits_parameters_file="$(arg joint_limits_config_ur5)"
+/>
+
+<joint name="ur5_joint" type="fixed">
+  <parent link="shopdesk" />
+  <child  link = "ur5_base_link" />
+  <origin xyz="0.7    -0.2   0.0" rpy="0 0 0" />
+</joint>
+
+<xacro:robotiq_ft300 parent="ur5_tool0" prefix="">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+</xacro:robotiq_ft300>
+
+<joint name="robotiq_joint" type="fixed">
+<parent link="ur5_tool0" />
+<child link = "robotiq_arg2f_base_link" />
+<origin xyz="0.0 0.0 0.0" rpy="0 0 ${0.0*pi}" />
+</joint>
+<xacro:robotiq_arg2f_85 prefix=""/>
+
+
+<link name="tip" />
+
+<joint name="tip_joint" type="fixed">
+  <parent link="ur5_tool0" />
+  <child  link = "tip" />
+  <origin xyz="0 0 0.14" rpy="0 0 0" />
+</joint>
+
+<gazebo reference="ur5_tool0">>
+ <provideFeedback>true</provideFeedback>
+</gazebo>
+
+
+<gazebo>
+  <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+      <updateRate>100.0</updateRate>
+      <topicName>ur5_wrench</topicName>
+      <jointName>ur5_tool0</jointName>
+  </plugin>
+</gazebo>
+
+<!--/xacro:macro-->
+
+</robot>

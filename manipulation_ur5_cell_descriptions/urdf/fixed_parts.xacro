@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="static_cell" >
+
+<xacro:macro name="static_cell">
+<xacro:include filename="$(find manipulation_ur5_cell_descriptions)/urdf/conveyor_system.urdf.xacro" />
+<xacro:conveyor_system/>
+<xacro:include filename="$(find manipulation_ur5_cell_descriptions)/urdf/shopdesk_dim.urdf.xacro" />
+<xacro:shopdesk/>
+
+<link name="world" />
+
+
+<joint name="conveyor_system_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "conveyor_system" />
+<origin xyz="-1.25 -0.05 0.78" rpy="0.0 0.0 0.0" />
+</joint>
+
+
+<joint name="shopdesk_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "shopdesk" />
+<origin xyz="-0.62 1.55 0.94" rpy="0.0 0.0 ${-0.5*pi}" />
+</joint>
+
+
+<link name="floor">
+  <collision>
+    <origin  xyz="0.0 0.0 -1.0" rpy="0 0 0" />
+    <geometry>
+      <box size="8 8 1.0"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="floor_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "floor" />
+<origin xyz="2 2 0.0" rpy="0 0 0.0" />
+</joint>
+
+
+
+<gazebo reference="world">
+    <static>true</static>
+</gazebo>
+<gazebo reference="shopdesk">
+    <static>true</static>
+</gazebo>
+<gazebo reference="conveyor_system">
+    <static>true</static>
+</gazebo>
+
+
+</xacro:macro>
+</robot>
+
