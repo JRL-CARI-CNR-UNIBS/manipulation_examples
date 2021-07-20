@@ -1,10 +1,31 @@
+#location of the fixed object in the scene
 scene_objects:
-- {type: "box_grigio", frame: "conveyor_system", position: [0.4, 0.25, 0.1], quaternion: [0, 0, 0, 1]}
-- {type: "box_grigio", frame: "conveyor_system", position: [0.7, 0.25, 0.1], quaternion: [0, 0, 0, 1]}
+  # type: type of the object as described below          
+  # frame: reference frame in which the objects location is defined
+  # position: position of the box  w.r.t. the reference frame
+  # quaternion: rotation of the box w.r.t. the reference frame
+- {type: "box_gray",  frame: "conveyor_system", position: [0.55, 0.25, 0.1], quaternion: [0, 0, 0, 1]}
+- {type: "box_red",   frame: "conveyor_system", position: [0.65, 1.60, 0.25], quaternion: [ 0, 0, 0.7071068, 0.7071068]}
 
-box_grigio:
+# name of the fixed object
+box_gray:
+  # color of the object
   color: [0.2,0.2,0.2, 1.]
+  # box dimensions
   box:  [0.20,0.30,0.05]
+  # object quaternion offset
   offset_quaternion: [ 0, 0, 0, 1 ]
+  # object offset
+  offset: [0, 0, -0.06]
+
+# name of the fixed object
+box_red:
+  # color of the object
+  color: [1.0,0.0,0.0, 1.]
+  # box dimensions
+  box:  [0.20,0.30,0.05]
+  # object quaternion offset
+  offset_quaternion: [ 0, 0, 0, 1 ]
+  # object offset
   offset: [0, 0, -0.06]
 

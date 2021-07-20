@@ -1,14 +1,26 @@
 outbound: 
+  # Outbound slots locations
   slots:
-  - {name: "A1", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [0.7071068, -0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
-  - {name: "A2", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "A3", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [0.7071068,  0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
-  - {name: "B1", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  - {name: "B2", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [0.7071068, -0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
-  - {name: "B3", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [0.7071068,  0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.01]}
-  #- {name: "A1", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  #- {name: "A2", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  #- {name: "A3", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.4, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  #- {name: "B1", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  #- {name: "B2", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
-  #- {name: "B3", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.7, 0.25, 0.1], quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.01]}
+  # name: slot name          
+  # slots_group: name of the slot group where slot is contained
+  # max_objects: numebr of object that can be contained in a slot, the value can be: minor than 0 if the slot has infinite space (e.g. to simulate a conveyor track that remove immediately the object once the object is released in the Slot), equal to 1 for single space slot (in this case only one object at a time can be contained) and major than 1 for slot that can contain contemporary multiple objects (e.g. to simulate a basket where an object falls after the release). 
+  # frame: reference frame in which the slot location is defined
+  # position: position of the slot  w.r.t. the reference frame
+  # quaternion: rotation of the slot w.r.t. the reference frame
+  # approach_distance: approach and leave distances along x,y,z axes from the location
+  - {name: "A1", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.55, 0.25, 0.16], quaternion: [0.7071068, -0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.1]}
+  - {name: "A2", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.55, 0.25, 0.16], quaternion: [1.0, 0.0, 0.0, 0.0],                  approach_distance: [0, 0, 0.1]}
+  - {name: "A3", slots_group: "group_A", frame: "conveyor_system", max_objects: -1, position: [0.55, 0.25, 0.16], quaternion: [0.7071068,  0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.1]}
+  - {name: "B1", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.65, 1.60, 0.30], quaternion: [1.0, 0.0, 0.0, 0.0],                  approach_distance: [0, 0, 0.1]}
+  - {name: "B2", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.65, 1.60, 0.30], quaternion: [0.7071068, -0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.1]}
+  - {name: "B3", slots_group: "group_B", frame: "conveyor_system", max_objects: -1, position: [0.65, 1.60, 0.30], quaternion: [0.7071068,  0.7071068, 0.000, 0.000], approach_distance: [0, 0, 0.1]}
+  
+
+# N.B. the object placing position is computed as:
+# w_T_s = w_T_f * f_T_s
+#
+# where:
+# w: world frame
+# f: reference frame
+# s: slot frame
+ 
