@@ -50,6 +50,7 @@ int main(int argc, char **argv)
               std::string, // to_loc_ctrl_id
               std::string, // leave_loc_ctrl_id
               std::string, // tool_id
+              std::string, // job_exec_name
               std::string, // property_pre_exec_id
               std::string, // property_exec_id
               std::string>> // property_post_exec_id
@@ -75,6 +76,7 @@ int main(int argc, char **argv)
                 std::string, // approach_loc_ctrl_id
                 std::string, // to_loc_ctrl_id
                 std::string, // leave_loc_ctrl_id
+                std::string, // job_exec_name
                 std::string, // tool_id
                 std::string, // property_pre_exec_id
                 std::string, // property_exec_id
@@ -141,6 +143,17 @@ int main(int argc, char **argv)
       leave_loc_ctrl_id = rosparam_utilities::toString(config["leave_loc_ctrl_id"]);  
     }
 
+    std::string job_exec_name;
+    if( !config.hasMember("job_exec_name") )
+    {
+      ROS_WARN("The element #%zu has not the field 'job_exec_name'", i);
+      job_exec_name = "";
+    }
+    else
+    {
+      job_exec_name = rosparam_utilities::toString(config["job_exec_name"]);  
+    }
+
     std::string tool_id;
     if( !config.hasMember("tool_id") )
     {
@@ -190,6 +203,7 @@ int main(int argc, char **argv)
                               approach_loc_ctrl_id,
                               to_loc_ctrl_id,
                               leave_loc_ctrl_id, 
+                              job_exec_name,
                               tool_id, 
                               property_pre_exec_id, 
                               property_exec_id, 
@@ -206,6 +220,7 @@ int main(int argc, char **argv)
                         std::string, 
                         std::string,
                         std::string, 
+                        std::string,
                         std::string, 
                         std::string, 
                         std::string>& skill: recipe)
@@ -226,10 +241,11 @@ int main(int argc, char **argv)
       pick_goal.to_loc_ctrl_id = std::get<3>(skill);
       pick_goal.leave_loc_ctrl_id = std::get<4>(skill);
 
-      pick_goal.tool_id = std::get<5>(skill);
-      pick_goal.property_pre_exec_id = std::get<6>(skill);
-      pick_goal.property_exec_id = std::get<7>(skill);
-      pick_goal.property_post_exec_id = std::get<8>(skill);
+      pick_goal.job_exec_name = std::get<5>(skill);;
+      pick_goal.tool_id = std::get<6>(skill);
+      pick_goal.property_pre_exec_id = std::get<7>(skill);
+      pick_goal.property_exec_id = std::get<8>(skill);
+      pick_goal.property_post_exec_id = std::get<9>(skill);
 
       pick_ac.sendGoalAndWait(pick_goal);
 
@@ -262,10 +278,11 @@ int main(int argc, char **argv)
       place_goal.to_loc_ctrl_id = std::get<3>(skill);
       place_goal.leave_loc_ctrl_id = std::get<4>(skill);
 
-      place_goal.tool_id = std::get<5>(skill);
-      place_goal.property_pre_exec_id = std::get<6>(skill);
-      place_goal.property_exec_id = std::get<7>(skill);
-      place_goal.property_post_exec_id = std::get<8>(skill);
+      place_goal.job_exec_name = std::get<5>(skill);;
+      place_goal.tool_id = std::get<6>(skill);
+      place_goal.property_pre_exec_id = std::get<7>(skill);
+      place_goal.property_exec_id = std::get<8>(skill);
+      place_goal.property_post_exec_id = std::get<9>(skill);
 
       place_ac.sendGoalAndWait(place_goal);
 
@@ -299,8 +316,9 @@ int main(int argc, char **argv)
 
       go_to_goal.to_loc_ctrl_id = std::get<3>(skill);
 
-      go_to_goal.tool_id = std::get<5>(skill);
-      go_to_goal.property_exec_id = std::get<7>(skill);
+      go_to_goal.job_exec_name = std::get<5>(skill);
+      go_to_goal.tool_id = std::get<6>(skill);
+      go_to_goal.property_exec_id = std::get<8>(skill);
 
       go_to_ac.sendGoalAndWait(go_to_goal);
 
