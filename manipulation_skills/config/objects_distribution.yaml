@@ -1,21 +1,21 @@
 inbound:
   # Inbound objects locations
   objects:
-  # name: object name          
+  # name: object name
   # frame: reference frame in which the objects location is defined
   # position: position of the box  w.r.t. the reference frame
   # quaternion: rotation of the box w.r.t. the reference frame
   # inbound: name of the inbound box where the object is contained
-  # approach_distance: approach and leave distances along x,y,z axes from the location  
-  - {type: "objects_description/L_obj_small",   frame: "shopdesk", position: [ 0.15,   0.20,  0.002], quaternion: [0,0,0,1], inbound: "Los1", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_small",   frame: "shopdesk", position: [ 0.15,   0.10,  0.002], quaternion: [0,0,0,1], inbound: "Los2", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_small",   frame: "shopdesk", position: [ 0.15,   0.00,  0.002], quaternion: [0,0,0,1], inbound: "Los3", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_small",   frame: "shopdesk", position: [ 0.15,  -0.10,  0.002], quaternion: [0,0,0,1], inbound: "Los4", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_small",   frame: "shopdesk", position: [ 0.15,  -0.20,  0.002], quaternion: [0,0,0,1], inbound: "Los5", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_big",     frame: "shopdesk", position: [ 0.30,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob1", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_big",     frame: "shopdesk", position: [ 0.45,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob2", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_big",     frame: "shopdesk", position: [ 0.60,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob3", approach_distance: [0, 0, 0.15]}
-  - {type: "objects_description/L_obj_big",     frame: "shopdesk", position: [ 0.75,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob4", approach_distance: [0, 0, 0.15]}
+  # approach_distance: approach and leave distances along x,y,z axes from the location
+  - {type: "L_obj_small",   frame: "shopdesk", position: [ 0.15,   0.20,  0.002], quaternion: [0,0,0,1], inbound: "Los1", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_small",   frame: "shopdesk", position: [ 0.15,   0.10,  0.002], quaternion: [0,0,0,1], inbound: "Los2", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_small",   frame: "shopdesk", position: [ 0.15,   0.00,  0.002], quaternion: [0,0,0,1], inbound: "Los3", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_small",   frame: "shopdesk", position: [ 0.15,  -0.10,  0.002], quaternion: [0,0,0,1], inbound: "Los4", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_small",   frame: "shopdesk", position: [ 0.15,  -0.20,  0.002], quaternion: [0,0,0,1], inbound: "Los5", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_big",     frame: "shopdesk", position: [ 0.30,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob1", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_big",     frame: "shopdesk", position: [ 0.45,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob2", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_big",     frame: "shopdesk", position: [ 0.60,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob3", approach_distance: [0, 0, 0.15]}
+  - {type: "L_obj_big",     frame: "shopdesk", position: [ 0.75,   0.25,  0.002], quaternion: [ 0, 0, 0.7071068, 0.7071068 ], inbound: "Lob4", approach_distance: [0, 0, 0.15]}
 
 
 # N.B. the object picking position is computed as:
@@ -25,4 +25,4 @@ inbound:
 # w: world frame
 # f: reference frame
 # o: object frame
-# g: is the grasping frame 
+# g: is the grasping frame
