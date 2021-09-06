@@ -1,4 +1,5 @@
-manipulation_objects_geometry:
+
+object_geometries:
   # name of the object to be manipulated
   L_obj_big:
     # color of the object
@@ -10,10 +11,6 @@ manipulation_objects_geometry:
     # object offset
     offset: [0,0,0]
 
-    # grasping postions
-    grasp_poses:
-    - {tool: "tip", position: [0, 0, 0.060], quaternion: [-0.7071068, 0.7071068, 0, 0]}
-    - {tool: "tip", position: [0, 0, 0.060], quaternion: [0.7071068, -0.7071068, 0, 0 ]}
 
   # name of the object to be manipulated
   L_obj_small:
@@ -25,8 +22,3 @@ manipulation_objects_geometry:
     scale: [0.001, 0.001, 0.001]
     # object offset
     offset: [0,0,0]
-
-    # grasping postions
-    grasp_poses:
-    - {tool: "tip", position: [0, 0, 0.060], quaternion: [0.7071068, -0.7071068, 0, 0]}
-    - {tool: "tip", position: [0, 0, 0.060], quaternion: [-0.7071068, 0.7071068, 0, 0]}
