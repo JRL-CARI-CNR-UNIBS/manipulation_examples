@@ -6,6 +6,8 @@ Panels:
       Expanded:
         - /MotionPlanning1
         - /MotionPlanning1/Scene Robot1
+        - /TF1/Frames1
+        - /TF1/Tree1
       Splitter Ratio: 0.7425600290298462
     Tree Height: 438
   - Class: rviz/Help
@@ -465,6 +467,533 @@ Visualization Manager:
       Topic: /poses
       Unreliable: false
       Value: false
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        A1:
+          Value: false
+        A1_approach:
+          Value: false
+        A1_leave:
+          Value: false
+        A2:
+          Value: false
+        A2_approach:
+          Value: false
+        A2_leave:
+          Value: false
+        A3:
+          Value: false
+        A3_approach:
+          Value: false
+        A3_leave:
+          Value: false
+        All Enabled: false
+        B1:
+          Value: false
+        B1_approach:
+          Value: false
+        B1_leave:
+          Value: false
+        B2:
+          Value: false
+        B2_approach:
+          Value: false
+        B2_leave:
+          Value: false
+        B3:
+          Value: false
+        B3_approach:
+          Value: false
+        B3_leave:
+          Value: false
+        Lob1:
+          Value: false
+        Lob1_approach:
+          Value: false
+        Lob1_leave:
+          Value: false
+        Lob2:
+          Value: false
+        Lob2_approach:
+          Value: false
+        Lob2_leave:
+          Value: false
+        Lob3:
+          Value: false
+        Lob3_approach:
+          Value: false
+        Lob3_leave:
+          Value: false
+        Lob4:
+          Value: false
+        Lob4_approach:
+          Value: false
+        Lob4_leave:
+          Value: false
+        Los1:
+          Value: false
+        Los1_approach:
+          Value: false
+        Los1_leave:
+          Value: false
+        Los2:
+          Value: false
+        Los2_approach:
+          Value: false
+        Los2_leave:
+          Value: false
+        Los3:
+          Value: false
+        Los3_approach:
+          Value: false
+        Los3_leave:
+          Value: false
+        Los4:
+          Value: false
+        Los4_approach:
+          Value: false
+        Los4_leave:
+          Value: false
+        Los5:
+          Value: false
+        Los5_approach:
+          Value: false
+        Los5_leave:
+          Value: false
+        conveyor_system:
+          Value: false
+        floor:
+          Value: false
+        ft300_mounting_plate:
+          Value: false
+        ft300_sensor:
+          Value: false
+        home:
+          Value: false
+        home_approach:
+          Value: false
+        home_leave:
+          Value: false
+        left_inner_finger:
+          Value: false
+        left_inner_finger_pad:
+          Value: false
+        left_outer_finger:
+          Value: false
+        left_outer_knuckle:
+          Value: false
+        manipulation/L_obj_big/n_0:
+          Value: false
+        manipulation/L_obj_big/n_0/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_big/n_0/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_big/n_0/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_big/n_1:
+          Value: false
+        manipulation/L_obj_big/n_1/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_big/n_1/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_big/n_1/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_big/n_2:
+          Value: false
+        manipulation/L_obj_big/n_2/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_big/n_2/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_big/n_2/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_big/n_3:
+          Value: false
+        manipulation/L_obj_big/n_3/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_big/n_3/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_big/n_3/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_big/n_4:
+          Value: true
+        manipulation/L_obj_big/n_4/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_big/n_4/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_big/n_4/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_big/n_5:
+          Value: true
+        manipulation/L_obj_big/n_5/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_big/n_5/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_big/n_5/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_big/n_6:
+          Value: true
+        manipulation/L_obj_big/n_6/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_big/n_6/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_big/n_6/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_big/n_7:
+          Value: true
+        manipulation/L_obj_big/n_7/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_big/n_7/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_big/n_7/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_small/n_0:
+          Value: true
+        manipulation/L_obj_small/n_0/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_small/n_0/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_small/n_0/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_small/n_1:
+          Value: false
+        manipulation/L_obj_small/n_1/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_small/n_1/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_small/n_1/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_small/n_2:
+          Value: false
+        manipulation/L_obj_small/n_2/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_small/n_2/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_small/n_2/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_small/n_3:
+          Value: false
+        manipulation/L_obj_small/n_3/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_small/n_3/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_small/n_3/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_small/n_4:
+          Value: false
+        manipulation/L_obj_small/n_4/grasp_0_tip:
+          Value: false
+        manipulation/L_obj_small/n_4/grasp_0_tip_approach:
+          Value: false
+        manipulation/L_obj_small/n_4/grasp_0_tip_leave:
+          Value: false
+        manipulation/L_obj_small/n_5:
+          Value: true
+        manipulation/L_obj_small/n_5/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_small/n_5/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_small/n_5/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_small/n_6:
+          Value: true
+        manipulation/L_obj_small/n_6/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_small/n_6/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_small/n_6/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_small/n_7:
+          Value: true
+        manipulation/L_obj_small/n_7/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_small/n_7/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_small/n_7/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_small/n_8:
+          Value: true
+        manipulation/L_obj_small/n_8/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_small/n_8/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_small/n_8/grasp_0_tip_leave:
+          Value: true
+        manipulation/L_obj_small/n_9:
+          Value: true
+        manipulation/L_obj_small/n_9/grasp_0_tip:
+          Value: true
+        manipulation/L_obj_small/n_9/grasp_0_tip_approach:
+          Value: true
+        manipulation/L_obj_small/n_9/grasp_0_tip_leave:
+          Value: true
+        right_inner_finger:
+          Value: false
+        right_inner_finger_pad:
+          Value: false
+        right_outer_finger:
+          Value: false
+        right_outer_knuckle:
+          Value: false
+        robotiq_arg2f_base_link:
+          Value: false
+        robotiq_ft_frame_id:
+          Value: false
+        shopdesk:
+          Value: false
+        tip:
+          Value: false
+        ur5_base:
+          Value: false
+        ur5_base_link:
+          Value: false
+        ur5_base_link_inertia:
+          Value: false
+        ur5_flange:
+          Value: false
+        ur5_forearm_link:
+          Value: false
+        ur5_shoulder_link:
+          Value: false
+        ur5_tool0:
+          Value: false
+        ur5_upper_arm_link:
+          Value: false
+        ur5_wrist_1_link:
+          Value: false
+        ur5_wrist_2_link:
+          Value: false
+        ur5_wrist_3_link:
+          Value: false
+        wall_conveyeor:
+          Value: false
+        world:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          A1:
+            A1_approach:
+              {}
+            A1_leave:
+              {}
+          A2:
+            A2_approach:
+              {}
+            A2_leave:
+              {}
+          A3:
+            A3_approach:
+              {}
+            A3_leave:
+              {}
+          B1:
+            B1_approach:
+              {}
+            B1_leave:
+              {}
+          B2:
+            B2_approach:
+              {}
+            B2_leave:
+              {}
+          B3:
+            B3_approach:
+              {}
+            B3_leave:
+              {}
+          Lob1:
+            Lob1_approach:
+              {}
+            Lob1_leave:
+              {}
+          Lob2:
+            Lob2_approach:
+              {}
+            Lob2_leave:
+              {}
+          Lob3:
+            Lob3_approach:
+              {}
+            Lob3_leave:
+              {}
+          Lob4:
+            Lob4_approach:
+              {}
+            Lob4_leave:
+              {}
+          Los1:
+            Los1_approach:
+              {}
+            Los1_leave:
+              {}
+          Los2:
+            Los2_approach:
+              {}
+            Los2_leave:
+              {}
+          Los3:
+            Los3_approach:
+              {}
+            Los3_leave:
+              {}
+          Los4:
+            Los4_approach:
+              {}
+            Los4_leave:
+              {}
+          Los5:
+            Los5_approach:
+              {}
+            Los5_leave:
+              {}
+          conveyor_system:
+            wall_conveyeor:
+              {}
+          floor:
+            {}
+          home:
+            home_approach:
+              {}
+            home_leave:
+              {}
+          manipulation/L_obj_big/n_0:
+            manipulation/L_obj_big/n_0/grasp_0_tip:
+              manipulation/L_obj_big/n_0/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_0/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_1:
+            manipulation/L_obj_big/n_1/grasp_0_tip:
+              manipulation/L_obj_big/n_1/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_1/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_2:
+            manipulation/L_obj_big/n_2/grasp_0_tip:
+              manipulation/L_obj_big/n_2/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_2/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_3:
+            manipulation/L_obj_big/n_3/grasp_0_tip:
+              manipulation/L_obj_big/n_3/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_3/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_4:
+            manipulation/L_obj_big/n_4/grasp_0_tip:
+              manipulation/L_obj_big/n_4/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_4/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_5:
+            manipulation/L_obj_big/n_5/grasp_0_tip:
+              manipulation/L_obj_big/n_5/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_5/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_6:
+            manipulation/L_obj_big/n_6/grasp_0_tip:
+              manipulation/L_obj_big/n_6/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_6/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_big/n_7:
+            manipulation/L_obj_big/n_7/grasp_0_tip:
+              manipulation/L_obj_big/n_7/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_big/n_7/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_0:
+            manipulation/L_obj_small/n_0/grasp_0_tip:
+              manipulation/L_obj_small/n_0/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_0/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_1:
+            manipulation/L_obj_small/n_1/grasp_0_tip:
+              manipulation/L_obj_small/n_1/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_1/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_2:
+            manipulation/L_obj_small/n_2/grasp_0_tip:
+              manipulation/L_obj_small/n_2/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_2/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_3:
+            manipulation/L_obj_small/n_3/grasp_0_tip:
+              manipulation/L_obj_small/n_3/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_3/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_4:
+            manipulation/L_obj_small/n_4/grasp_0_tip:
+              manipulation/L_obj_small/n_4/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_4/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_5:
+            manipulation/L_obj_small/n_5/grasp_0_tip:
+              manipulation/L_obj_small/n_5/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_5/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_6:
+            manipulation/L_obj_small/n_6/grasp_0_tip:
+              manipulation/L_obj_small/n_6/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_6/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_7:
+            manipulation/L_obj_small/n_7/grasp_0_tip:
+              manipulation/L_obj_small/n_7/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_7/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_8:
+            manipulation/L_obj_small/n_8/grasp_0_tip:
+              manipulation/L_obj_small/n_8/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_8/grasp_0_tip_leave:
+                {}
+          manipulation/L_obj_small/n_9:
+            manipulation/L_obj_small/n_9/grasp_0_tip:
+              manipulation/L_obj_small/n_9/grasp_0_tip_approach:
+                {}
+              manipulation/L_obj_small/n_9/grasp_0_tip_leave:
+                {}
+          shopdesk:
+            ur5_base_link:
+              ur5_base:
+                {}
+              ur5_base_link_inertia:
+                ur5_shoulder_link:
+                  ur5_upper_arm_link:
+                    ur5_forearm_link:
+                      ur5_wrist_1_link:
+                        ur5_wrist_2_link:
+                          ur5_wrist_3_link:
+                            ur5_flange:
+                              ur5_tool0:
+                                ft300_mounting_plate:
+                                  ft300_sensor:
+                                    robotiq_ft_frame_id:
+                                      {}
+                                robotiq_arg2f_base_link:
+                                  {}
+                                tip:
+                                  {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -481,7 +1010,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 5.143280982971191
+      Distance: 4.948184013366699
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -515,11 +1044,11 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000200000000000002a20000039efc0200000007fb000000100044006900730070006c006100790073010000003d000001f3000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc00000236000001a50000019a0100001cfa000000000100000002fb000000180052006f0062006f0074007300540065006c0065006f00700100000000ffffffff0000009300fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001f300ffffff00000001000001120000039efc0200000001fb000000280043006f006e00660069006700750072006100740069006f006e004d0061006e0061006700650072010000003d0000039e0000016b00ffffff000003780000039e00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000200000000000002a20000039efc0200000007fb000000100044006900730070006c006100790073010000003d000001f3000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fc00000236000001a50000019a0100001cfa000000000100000002fb000000180052006f0062006f0074007300540065006c0065006f00700100000000ffffffff0000009300fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000000000002a2000001f300ffffff00000001000001120000039efc0200000001fb000000280043006f006e00660069006700750072006100740069006f006e004d0061006e0061006700650072010000003d0000039e0000016b00ffffff000003c00000039e00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RobotsTeleop:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1848
-  X: 72
+  Width: 1920
+  X: 0
   Y: 27

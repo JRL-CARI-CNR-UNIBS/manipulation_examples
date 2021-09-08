@@ -2,14 +2,9 @@ manipulation_object_types:
 - {
       "type": "L_obj_big",
       "grasp_poses": [{
-          "position": [0, 0, 0.06],
-          "quaternion": [-0.7071068, 0.7071068, 0, 0],
-          "approach_distance": [0, 0, 0.1],
-          "tool": "tip"
-      }, {
-          "position": [0, 0, 0.06],
-          "quaternion": [0.7071068, 0.7071068, 0, 0 ],
-          "approach_distance": [0, 0, 0.1],
+          "position": [0, 0, 0.08],
+          "quaternion": [ 1, 0, 0, 0 ],
+          "approach_distance": [0, 0, -0.1],
           "tool": "tip"
       }]
   }
@@ -17,13 +12,8 @@ manipulation_object_types:
       "type": "L_obj_small",
       "grasp_poses": [{
           "position": [0, 0, 0.06],
-          "quaternion": [-0.7071068, 0.7071068, 0, 0],
-          "approach_distance": [0, 0, 0.1],
-          "tool": "tip"
-      }, {
-          "position": [0, 0, 0.06],
-          "quaternion": [0.7071068, 0.7071068, 0, 0 ],
-          "approach_distance": [0, 0, 0.1],
+          "quaternion": [ 1, 0, 0, 0 ],
+          "approach_distance": [0, 0, -0.1],
           "tool": "tip"
       }]
   }
