@@ -1,34 +1,34 @@
 inbound:
   # Inbound boxes locations
   boxes:
-  # name: box name          
+  # name: box name
   # frame: reference frame in which the box location is defined
   # position: position of the object  w.r.t. the reference frame
   # quaternion: rotation of the object w.r.t. the reference frame
-  # approach_distance: approach and leave distances along x,y,z axes from the location    
-  - { name: "Los1",            frame: "shopdesk",        position: [ 0.15,  0.2,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
+  # approach_distance: approach and leave distances along x,y,z axes from the location
+  - { name: "Los1",            frame: "shopdesk",        position: [ 0.15,  0.2,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
   - { name: "Los2",            frame: "shopdesk",        position: [ 0.15,  0.1,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
-  - { name: "Los3",            frame: "shopdesk",        position: [ 0.15,  0.0,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
-  - { name: "Los4",            frame: "shopdesk",        position: [ 0.15, -0.1,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
-  - { name: "Los5",            frame: "shopdesk",        position: [ 0.15, -0.2,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
-  - { name: "Lob1",            frame: "shopdesk",        position: [ 0.30,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
-  - { name: "Lob2",            frame: "shopdesk",        position: [ 0.45,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] } 
-  - { name: "Lob3",            frame: "shopdesk",        position: [ 0.60,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }  
+  - { name: "Los3",            frame: "shopdesk",        position: [ 0.15,  0.0,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
+  - { name: "Los4",            frame: "shopdesk",        position: [ 0.15, -0.1,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
+  - { name: "Los5",            frame: "shopdesk",        position: [ 0.15, -0.2,  0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
+  - { name: "Lob1",            frame: "shopdesk",        position: [ 0.30,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
+  - { name: "Lob2",            frame: "shopdesk",        position: [ 0.45,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
+  - { name: "Lob3",            frame: "shopdesk",        position: [ 0.60,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
   - { name: "Lob4",            frame: "shopdesk",        position: [ 0.75,  0.25, 0.05],  quaternion: [1.0, 0.0, 0.0, 0.0], approach_distance: [0, 0, 0.15] }
-  
+
 
 # inbound_pick_server configurations
 inbound_pick_server:
 
   # number of solutions for the IK
   ik_sol_number: 512
-  # maximum stall iterations during the research of the IK 
+  # maximum stall iterations during the research of the IK
   max_stall_iter: 100
   # name of the collision detector
   collision_detector: FCL
   # planning time
   planning_time: 5
-  
+
   # names of the move groups to be used for the planning
   groups:
     ur5: tip
