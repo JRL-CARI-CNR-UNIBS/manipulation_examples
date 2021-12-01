@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+<rosparam command="load" file="$(find manipulation_skills)/config/objects_description.yaml"/>
+<rosparam command="load" file="$(find manipulation_skills)/config/types_description.yaml"/>
+<rosparam command="load" file="$(find manipulation_skills)/config/objects_distribution.yaml"/>
+<rosparam command="load" file="$(find manipulation_skills)/config/inbound_server.yaml"/>
+
+<node pkg="inbound_pick"  type="inbound_pick_loader" name="inbound_pick_loader" output="screen"/>
+</launch>

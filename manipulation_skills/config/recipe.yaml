@@ -8,10 +8,10 @@ multi_skills:
   # description: description of the action to be executed e.g. the name of the object to be picked or placed, or the name of the location where the move group has to move
   # N.B. all the other parameters are referred to the name of the robot controller to be used for the specific or to the gripper configurations, each skill have different parameters, so for further details please refer to GoTo.action, PickObjects.action and PlaceObjects.action contained in manipulations_msgs package
   - {action: "goto",  description: ["home"],                      to_loc_ctrl_id: "trajectory_tracking",        job_exec_name: "go_to", tool_id: "gripper_fake",  property_exec_id: "open"    }
-  # - {action: "pick",  description: ["L_obj_small"],               approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "pick",  tool_id: "gripper_fake",  property_exec_id: "close"   }
-  # - {action: "place", description: ["group_A",],                  approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "place", tool_id: "gripper_fake",  property_exec_id: "open"    }
-  - {action: "pick",  description: ["L_obj_big","L_obj_small"],   approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "pick",  tool_id: "gripper_fake",  property_exec_id: "close"   }
-  - {action: "place", description: ["group_A","group_B"],         approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "place", tool_id: "gripper_fake",  property_exec_id: "open"    }
+  - {action: "pick",  description: ["L_obj_small"],               approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "pick",  tool_id: "gripper_fake",  property_exec_id: "close"   }
+  - {action: "place", description: ["group_A",],                  approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "place", tool_id: "gripper_fake",  property_exec_id: "open"    }
+  # - {action: "pick",  description: ["L_obj_big","L_obj_small"],   approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "pick",  tool_id: "gripper_fake",  property_exec_id: "close"   }
+  # - {action: "place", description: ["group_A","group_B"],         approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "place", tool_id: "gripper_fake",  property_exec_id: "open"    }
   # - {action: "pick",  description: ["L_obj_big","L_obj_small"],   approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "pick",  tool_id: "gripper_fake",  property_exec_id: "close"   }
   # - {action: "place", description: ["group_A"],                   approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "place", tool_id: "gripper_fake",  property_exec_id: "open"    }
   # - {action: "pick",  description: ["L_obj_big","L_obj_small"],   approach_loc_ctrl_id: "trajectory_tracking",  job_exec_name: "pick",  tool_id: "gripper_fake",  property_exec_id: "close"   }
