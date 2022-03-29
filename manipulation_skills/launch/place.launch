@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <launch>
+<arg name="reference_frame" default="world" />
 <arg name="pipeline" default="dirrt" />
 <arg name="load_param" default="load" />
 <arg name="debug" default="false" />
@@ -18,6 +19,8 @@
   <param if="$(eval pipeline == 'ompl')" name="ur5/planning_plugin" value="ompl_interface/OMPLPlanner" />
   <param if="$(eval pipeline == 'human_aware')" name="ur5/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <param if="$(eval pipeline == 'dirrt')" name="ur5/planning_plugin" value="pathplan/DIRRTStar" />
-  <remap from="/outbound_place_server/job/place" to="/robotiq_gripper"/></node>
+  <remap from="/outbound_place_server/job/place" to="/robotiq_gripper"/>
+  <param name="reference_frame" value="$(arg reference_frame)" />
+</node>
 <node pkg="outbound_place"  type="outbound_place_loader" name="outbound_place_loader" output="screen"/>
 </launch>
