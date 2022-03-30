@@ -12,6 +12,7 @@
   <node pkg="robotiq_ur_modbus"  type="test_robotiq_ros.py" name="robotiq_ur_modbus_pick" args="/robotiq_gripper" output="screen"/>
 </group>
 
+<arg name="reference_frame" default="world" />
 <arg name="pipeline" default="dirrt" />
 <arg name="load_param" default="load" />
 <arg name="debug" default="false" />
@@ -24,6 +25,7 @@
 <arg name="load_param" value="$(arg load_param)"/>
 <arg name="pipeline" value="$(arg pipeline)"/>
 <arg name="baseline" value="$(arg baseline)"/>
+<arg name="reference_frame" value="$(arg reference_frame)" />
 </include>
 
 <include file="$(find manipulation_skills)/launch/pick.launch">
@@ -31,6 +33,7 @@
 <arg name="load_param" value="$(arg load_param)"/>
 <arg name="pipeline" value="$(arg pipeline)"/>
 <arg name="baseline" value="$(arg baseline)"/>
+<arg name="reference_frame" value="$(arg reference_frame)" />
 </include>
 
 <include file="$(find manipulation_skills)/launch/place.launch">
@@ -38,6 +41,7 @@
 <arg name="load_param" value="$(arg load_param)"/>
 <arg name="pipeline" value="$(arg pipeline)"/>
 <arg name="baseline" value="$(arg baseline)"/>
+<arg name="reference_frame" value="$(arg reference_frame)" />
 </include>
 
 </launch>
